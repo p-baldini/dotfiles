@@ -4,6 +4,9 @@
 #   APPLICATIONS
 #######################################################################################################
 
+# needed to make java GUI works https://bit.ly/2ycKpYD
+wmname LG3D
+
 # set wallpaper
 feh --bg-center $HOME/Immagini/wallpapers/default
 
