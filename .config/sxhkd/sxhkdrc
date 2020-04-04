@@ -10,6 +10,33 @@ super + Return
 super + Escape
 	pkill -USR1 -x sxhkd
 
+#super
+#	albert show && bspc {albert,desktop} -f last
+
+#######################################################################################################
+#	KEYBOARD MEDIA KEYS
+#######################################################################################################
+
+# increment brightness
+XF86MonBrightnessUp
+	sudo light -A 10
+
+# decrement brightness
+XF86MonBrightnessDown
+	sudo light -U 10
+
+# audio mute
+XF86AudioMute
+	amixer -D pulse set Master 1+ toggle
+
+# increase audio
+XF86AudioRaiseVolume
+	amixer set 'Master' 10%+
+
+# decrease audio
+XF86AudioLowerVolume
+	amixer set 'Master' 10%-
+
 #######################################################################################################
 #	BSPWM HOTKEYS
 #######################################################################################################
