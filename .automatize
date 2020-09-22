@@ -103,3 +103,30 @@ dnf install dolphin-megasync
 dnf remove gnome-contacts
 dnf remove gnome-maps
 dnf remove gnome-maps
+
+############################################################
+# install snapd (needed for mailspring and bitwarden)
+############################################################
+
+dnf install snapd
+
+############################################################
+# install mailspring
+############################################################
+
+snap install mailspring
+
+############################################################
+# install bitwarden
+############################################################
+
+snap install bitwarden
+
+############################################################
+# install teams
+############################################################
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[teams]\nname=teams\nbaseurl=https://packages.microsoft.com/yumrepos/ms-teams\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/teams.repo'
+sudo dnf check-update
+sudo dnf install teams
