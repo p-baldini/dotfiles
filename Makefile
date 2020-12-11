@@ -8,7 +8,7 @@ REMOVE=dnf remove
 
 # BUILD RULES
 
-install: dependencies alacritty bspwm polybar
+install: dependencies alacritty bspwm feh fish polybar
 
 alacritty: # terminal emulator
 	$(INSTALL) alacritty
@@ -21,12 +21,18 @@ bspwm:	dependencies polybar # window manager
 	cd bspwm; make; make install; cd ..
 	cd sxhkd; make; make install; cd ..
 	chmod +x ~/.config/bspwm/bspwmrc
-	wget https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg
 	rm -rf bspwm sxhkd
+
+feh: # background manager
+	$(INSTALL) feh
+	wget https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg
+
+fish: # shell
+	chsh -s `which fish`
 
 polybar: # status bar
 	$(INSTALL) polybar
 	chmod +x ~/.config/polybar/launch.sh
 
 dependencies:
-	$(INSTALL) feh git picom wget wmname
+	$(INSTALL) git picom util-linux-user wget wmname
