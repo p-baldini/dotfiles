@@ -41,6 +41,8 @@
 .m2/
 # Matlab application data
 .matlab/
+# Mozilla data
+.mozilla/
 # npm application data
 .npm/
 # JavaFX data
@@ -95,8 +97,13 @@ Videos/
 
 # Bash data
 .bash_history
+.bash_logout
+.bash_profile
+.bashrc
 # PulseAudio file
 .esd_auth
+# Feh unwanted file
+.fehbg
 # man generated file
 .lesshst
 # muPDF file
