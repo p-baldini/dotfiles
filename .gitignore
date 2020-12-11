@@ -9,7 +9,7 @@
 # miscellaneous applications data
 .cache/
 # miscellaneous applications data - exclude what you need
-.config/
+.config/*
 .dbus/
 # Docker application data
 .docker/
@@ -120,4 +120,3 @@ Videos/
 !.config/picom
 !.config/polybar
 !.config/sxhkd
-
