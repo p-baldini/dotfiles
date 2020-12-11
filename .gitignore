@@ -110,3 +110,14 @@ Videos/
 .wget-hsts
 # credentials for authentication of X sessions
 .Xauthority
+
+#######################################################
+# EXCEPTIONS
+#######################################################
+
+!.config/bspwm
+!.config/git
+!.config/picom
+!.config/polybar
+!.config/sxhkd
+
