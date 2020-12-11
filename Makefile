@@ -21,6 +21,7 @@ bspwm:	dependencies polybar # window manager
 	cd bspwm; make; make install; cd ..
 	cd sxhkd; make; make install; cd ..
 	chmod +x ~/.config/bspwm/bspwmrc
+	wget https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg
 	rm -rf bspwm sxhkd
 
 polybar: # status bar
@@ -28,4 +29,4 @@ polybar: # status bar
 	chmod +x ~/.config/polybar/launch.sh
 
 dependencies:
-	$(INSTALL) git wmname feh
+	$(INSTALL) feh git picom wget wmname
