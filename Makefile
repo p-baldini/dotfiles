@@ -8,15 +8,14 @@ REMOVE=dnf remove
 
 # BUILD RULES
 
-install: dependencies alacritty bspwm feh fish polybar
+install: dependencies bspwm feh fish polybar
 
-alacritty: # terminal emulator
-	$(INSTALL) alacritty
+alacritty: $(INSTALL) alacritty # terminal emulator
 
-bspwm:	dependencies polybar # window manager
+bspwm:	dependencies alacritty feh git picom polybar rofi # window manager
 	git clone https://github.com/baskerville/bspwm.git
 	git clone https://github.com/baskerville/sxhkd.git
-	$(INSTALL) xcb-util-devel xcb-util-keysyms-devel xcb-util-wm-devel alsa-lib-devel dmenu rxvt-unicode terminus-fonts # TODO maybe remove last two 
+	$(INSTALL) xcb-util-devel xcb-util-keysyms-devel xcb-util-wm-devel alsa-lib-devel terminus-fonts # TODO maybe remove last
 	$(GROUP_INSTALL) "Development Tools"
 	cd bspwm; make; make install; cd ..
 	cd sxhkd; make; make install; cd ..
@@ -25,14 +24,23 @@ bspwm:	dependencies polybar # window manager
 
 feh: # background manager
 	$(INSTALL) feh
-	wget https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg
+	aria2c https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg
 
 fish: # shell
+	$(INSTALL) fish
 	chsh -s `which fish`
+
+git: $(INSTALL) git # control version software
+
+picom: $(INSTALL) picom # compositor for Xorg
 
 polybar: # status bar
 	$(INSTALL) polybar
 	chmod +x ~/.config/polybar/launch.sh
 
-dependencies:
-	$(INSTALL) git picom util-linux-user wget wmname
+rofi: $(INSTALL) rofi # application launcher
+
+dependencies: # basic dependencies
+	$(INSTALL) util-linux-user # contains 'chsh' (i.e., change shell)
+	$(INSTALL) aria2 # download manager
+	$(INSTALL) wmname # utility to set name of window manager. Some java app have problems without it

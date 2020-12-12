@@ -12,7 +12,7 @@ super + Escape
 
 # program launcher
 super + @space
-	dmenu_run
+	rofi -show combi
 
 #######################################################################################################
 #	KEYBOARD MEDIA KEYS
