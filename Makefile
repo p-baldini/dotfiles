@@ -22,7 +22,7 @@ bspwm:	dependencies alacritty feh git picom polybar rofi # window manager
 	chmod +x ~/.config/bspwm/bspwmrc
 	rm -rf bspwm sxhkd
 
-feh: # background manager
+feh: dependencies # background manager
 	$(INSTALL) feh
 	aria2c https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg
 
@@ -38,7 +38,9 @@ polybar: # status bar
 	$(INSTALL) polybar
 	chmod +x ~/.config/polybar/launch.sh
 
-ranger:	$(INSTALL) ranger # text based file manager
+ranger: dependencies # text based file manager
+	$(INSTALL) ranger
+	aria2c -d /usr/share/pixmaps -o ranger.png https://upload.wikimedia.org/wikipedia/commons/e/e4/Ranger_logo.png
 
 rofi: $(INSTALL) rofi # application launcher
 
