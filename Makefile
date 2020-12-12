@@ -8,23 +8,16 @@ REMOVE=dnf remove
 
 # BUILD RULES
 
-install: dependencies bspwm feh fish polybar
+install: dependencies alacritty audacity bitwarden fish git mailspring
 
 alacritty: $(INSTALL) alacritty # terminal emulator
 
-bspwm:	dependencies alacritty feh git picom polybar rofi # window manager
-	git clone https://github.com/baskerville/bspwm.git
-	git clone https://github.com/baskerville/sxhkd.git
-	$(INSTALL) xcb-util-devel xcb-util-keysyms-devel xcb-util-wm-devel alsa-lib-devel terminus-fonts # TODO maybe remove last
-	$(GROUP_INSTALL) "Development Tools"
-	cd bspwm; make; make install; cd ..
-	cd sxhkd; make; make install; cd ..
-	chmod +x ~/.config/bspwm/bspwmrc
-	rm -rf bspwm sxhkd
+audacity: # audio editing
+	$(INSTALL) libasound2-plugins "pulseaudio-*" paman paprefs pavucontrol pavumeter
+	$(INSTALL) audacity-freeworld
 
-feh: # background manager
-	$(INSTALL) feh
-	aria2c https://upload.wikimedia.org/wikipedia/commons/0/0d/Great_Wave_off_Kanagawa2.jpg
+bitwarden: dependencies # password manager
+	snap install bitwarden
 
 fish: # shell
 	$(INSTALL) fish
@@ -32,15 +25,9 @@ fish: # shell
 
 git: $(INSTALL) git # control version software
 
-picom: $(INSTALL) picom # compositor for Xorg
-
-polybar: # status bar
-	$(INSTALL) polybar
-	chmod +x ~/.config/polybar/launch.sh
-
-rofi: $(INSTALL) rofi # application launcher
+mailspring: dependencies # email client
+	snap install mailspring
 
 dependencies: # basic dependencies
 	$(INSTALL) util-linux-user # contains 'chsh' (i.e., change shell)
-	$(INSTALL) aria2 # download manager
-	$(INSTALL) wmname # utility to set name of window manager. Some java app have problems without it
+	$(INSTALL) snapd # packaging and deployment system

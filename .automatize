@@ -89,45 +89,12 @@ echo "" >> $HOME/.local/share/applications/eclipse.desktop
 echo "TODO"
 
 ############################################################
-# install audacity
-############################################################
-
-dnf install libasound2-plugins "pulseaudio-*" paman paprefs pavucontrol pavumeter
-dnf install audacity-freeworld
-
-pavucontrol
-
-############################################################
-# install mega for dolphin
-############################################################
-
-dnf install dolphin-megasync
-
-############################################################
 # remove some gnomes
 ############################################################
 
 dnf remove gnome-contacts
 dnf remove gnome-maps
 dnf remove gnome-maps
-
-############################################################
-# install snapd (needed for mailspring and bitwarden)
-############################################################
-
-dnf install snapd
-
-############################################################
-# install mailspring
-############################################################
-
-snap install mailspring
-
-############################################################
-# install bitwarden
-############################################################
-
-snap install bitwarden
 
 ############################################################
 # install teams
