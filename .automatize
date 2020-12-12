@@ -17,18 +17,6 @@ dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$
 dnf update -y
 
 ############################################################
-# install dnf-faster based on aria2
-############################################################
-
-dnf install git aria2 patch
-cd $HOME/Downloads
-git clone https://github.com/chitholian/DNF-Faster.git
-cd DNF-Faster/
-sudo patch -p0 -d/ -b < dnf-faster.patch
-cd ..
-rm -rf DNF-Faster/
-
-############################################################
 # install nvidia driver
 ############################################################
 
@@ -36,12 +24,6 @@ rm -rf DNF-Faster/
 dnf install akmod-nvidia
 dnf install xorg-x11-drv-nvidia-cuda
 modinfo -F version nvidia
-
-############################################################
-# install nano
-############################################################
-
-dnf install nano
 
 ############################################################
 # install vivaldi & remove firefox
@@ -52,23 +34,6 @@ dnf install vivaldi-stable
 dnf remove firefox
 rm -rf /usr/lib64/firefox/
 rm -rf $HOME/.mozilla/
-
-############################################################
-# install & setup fish shell
-############################################################
-
-dnf install fish
-chsh -s $(which fish) $USERNAME
-rm $HOME/.bash*
-
-############################################################
-# install dolphin & konsole
-############################################################
-
-dnf install dolphin
-echo "TODO remove defult file manager!"
-dnf install konsole
-dnf remove gnome-terminal
 
 ############################################################
 # install intellij-idea
@@ -95,6 +60,7 @@ echo "TODO"
 dnf remove gnome-contacts
 dnf remove gnome-maps
 dnf remove gnome-maps
+dnf remove gnome-terminal
 
 ############################################################
 # install teams
