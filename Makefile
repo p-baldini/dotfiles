@@ -8,7 +8,7 @@ REMOVE=dnf remove
 
 # BUILD RULES
 
-install: dependencies bspwm feh fish polybar
+install: dependencies alacritty bspwm feh fish git picom polybar ranger rofi
 
 alacritty: $(INSTALL) alacritty # terminal emulator
 
@@ -37,6 +37,8 @@ picom: $(INSTALL) picom # compositor for Xorg
 polybar: # status bar
 	$(INSTALL) polybar
 	chmod +x ~/.config/polybar/launch.sh
+
+ranger:	$(INSTALL) ranger # text based file manager
 
 rofi: $(INSTALL) rofi # application launcher
 
