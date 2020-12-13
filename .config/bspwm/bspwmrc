@@ -10,7 +10,7 @@ wmname LG3D
 # set wallpaper
 feh --bg-center --bg-scale $HOME/Pictures/Great_Wave_off_Kanagawa2.jpg
 
-# launc sxhkd
+# launch sxhkd
 sxhkd &
 
 # launch polybar
