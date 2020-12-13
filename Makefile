@@ -8,7 +8,7 @@ REMOVE=dnf remove
 
 # BUILD RULES
 
-install: dependencies alacritty audacity bitwarden dnf-faster fish git mailspring
+install: dependencies alacritty audacity bitwarden dnf-faster fish git mailspring ranger
 
 alacritty: $(INSTALL) alacritty # terminal emulator
 
@@ -35,6 +35,10 @@ git: $(INSTALL) git # control version software
 
 mailspring: dependencies # email client
 	snap install mailspring
+
+ranger: dependencies # text based file manager
+	$(INSTALL) ranger
+	aria2c -d /usr/share/pixmaps -o ranger.png https://upload.wikimedia.org/wikipedia/commons/e/e4/Ranger_logo.png
 
 dependencies: # basic dependencies
 	$(INSTALL) util-linux-user # contains 'chsh' (i.e., change shell)

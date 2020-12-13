@@ -67,6 +67,8 @@
 .subversion/
 # TexLive versions data
 .texlive*/
+# Vim data
+.vim/
 # VMWare application data
 .vmware/
 # VSCode application data
@@ -113,6 +115,8 @@ Videos/
 # Steam files
 .steampath
 .steampid
+# vim info file
+.viminfo
 # wget generated file
 .wget-hsts
 # credentials for authentication of X sessions
@@ -127,3 +131,4 @@ Videos/
 !.config/picom
 !.config/polybar
 !.config/sxhkd
+!.config/ranger
