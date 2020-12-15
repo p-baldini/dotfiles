@@ -19,8 +19,8 @@ alacritty: # terminal emulator
 	$(INSTALL) alacritty
 
 bspwm: dependencies alacritty feh git picom polybar rofi # window manager
-	git clone https://github.com/baskerville/bspwm.git $(DOWNLOAD)
-	git clone https://github.com/baskerville/sxhkd.git $(DOWNLOAD)
+	git clone https://github.com/baskerville/bspwm.git $(DOWNLOAD)/bspwm
+	git clone https://github.com/baskerville/sxhkd.git $(DOWNLOAD)/sxhkd
 	$(INSTALL) xcb-util-devel xcb-util-keysyms-devel xcb-util-wm-devel alsa-lib-devel terminus-fonts # TODO maybe remove last
 	$(GROUP_INSTALL) "Development Tools"
 	cd $(DOWNLOAD)/bspwm; make; make install; cd ..
@@ -49,7 +49,7 @@ polybar: # status bar
 
 ranger: dependencies # text based file manager
 	$(INSTALL) ranger
-	aria2c -d /usr/share/pixmaps -o ranger.png https://upload.wikimedia.org/wikipedia/commons/e/e4/Ranger_logo.png
+	sudo aria2c -d /usr/share/pixmaps -o ranger.png https://upload.wikimedia.org/wikipedia/commons/e/e4/Ranger_logo.png
 
 rofi: # application launcher
 	$(INSTALL) rofi
