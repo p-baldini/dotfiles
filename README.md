@@ -5,4 +5,4 @@ In home directory:<br>
 `git remote add origin https://github.com/Mandrab/dotfiles`<br>
 `git fetch --all`<br>
 `git checkout origin/BRANCH_NAME`<br>
-`sudo make install HOME=$HOME` this allow to find user 'homedir' also if the executing user is root
+`make install` do not use 'sudo' bacause it will prevent access to user vars (e.g. HOME)
