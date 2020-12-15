@@ -8,7 +8,7 @@
 wmname LG3D
 
 # set wallpaper
-feh --bg-center --bg-scale $HOME/Pictures/Great_Wave_off_Kanagawa2.jpg
+feh --bg-center --bg-scale `xdg-user-dir PICTURES`/Great_Wave_off_Kanagawa2.jpg
 
 # launch sxhkd
 sxhkd &
