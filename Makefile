@@ -23,8 +23,8 @@ bspwm: dependencies alacritty feh git picom polybar rofi # window manager
 	git clone https://github.com/baskerville/sxhkd.git $(DOWNLOAD)/sxhkd
 	$(INSTALL) xcb-util-devel xcb-util-keysyms-devel xcb-util-wm-devel alsa-lib-devel terminus-fonts # TODO maybe remove last
 	$(GROUP_INSTALL) "Development Tools"
-	cd $(DOWNLOAD)/bspwm; make; make install; cd ..
-	cd $(DOWNLOAD)/sxhkd; make; make install; cd ..
+	cd $(DOWNLOAD)/bspwm; make; sudo make install; cd ..
+	cd $(DOWNLOAD)/sxhkd; make; sudo make install; cd ..
 	sudo chmod +x $(HOME)/.config/bspwm/bspwmrc
 	rm -rf $(DOWNLOAD)/bspwm $(DOWNLOAD)/sxhkd
 
