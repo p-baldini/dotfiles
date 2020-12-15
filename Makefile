@@ -26,7 +26,7 @@ bspwm: dependencies alacritty feh git picom polybar rofi # window manager
 	cd $(DOWNLOAD)/bspwm; make; make install; cd ..
 	cd $(DOWNLOAD)/sxhkd; make; make install; cd ..
 	sudo chmod +x $(HOME)/.config/bspwm/bspwmrc
-	rm -rf bspwm sxhkd
+	rm -rf $(DOWNLOAD)/bspwm $(DOWNLOAD)/sxhkd
 
 feh: dependencies # background manager
 	$(INSTALL) feh
