@@ -10,7 +10,8 @@ REMOVE=dnf remove
 
 install: dependencies alacritty bspwm feh fish git picom polybar ranger rofi
 
-alacritty: $(INSTALL) alacritty # terminal emulator
+alacritty: # terminal emulator
+	$(INSTALL) alacritty
 
 bspwm:	dependencies alacritty feh git picom polybar rofi # window manager
 	git clone https://github.com/baskerville/bspwm.git
@@ -30,9 +31,11 @@ fish: # shell
 	$(INSTALL) fish
 	chsh -s `which fish`
 
-git: $(INSTALL) git # control version software
+git: # control version software
+	$(INSTALL) git
 
-picom: $(INSTALL) picom # compositor for Xorg
+picom: # compositor for Xorg
+	$(INSTALL) picom
 
 polybar: # status bar
 	$(INSTALL) polybar
@@ -42,7 +45,8 @@ ranger: dependencies # text based file manager
 	$(INSTALL) ranger
 	aria2c -d /usr/share/pixmaps -o ranger.png https://upload.wikimedia.org/wikipedia/commons/e/e4/Ranger_logo.png
 
-rofi: $(INSTALL) rofi # application launcher
+rofi: # application launcher
+	$(INSTALL) rofi
 
 dependencies: # basic dependencies
 	$(INSTALL) util-linux-user # contains 'chsh' (i.e., change shell)
