@@ -42,7 +42,7 @@ git: # control version software
 	$(INSTALL) git
 
 mailspring: dependencies # email client
-	snap install mailspring
+	sudo snap install mailspring
 
 ranger: dependencies # text based file manager
 	$(INSTALL) ranger
