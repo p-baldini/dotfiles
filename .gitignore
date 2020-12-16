@@ -129,6 +129,7 @@ Videos/
 # EXCEPTIONS
 #######################################################
 
+!.config/alacritty
 !.config/bspwm
 !.config/git
 !.config/picom
