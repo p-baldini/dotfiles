@@ -9,3 +9,6 @@ In home directory:<br>
 
 # TODO list:
 - dnf-patcher have problems finding file to patch
+- change rofi to search .desktop files
+- costomize rofi appearance
+- rule to clean gnome files
