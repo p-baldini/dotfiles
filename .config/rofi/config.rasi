@@ -1,0 +1,13 @@
+configuration {
+	modi: "drun,window,run,ssh";
+	width: 75;
+	lines: 10;
+	location: 2;
+	fixed-num-lines: false;
+	show-icons: true;
+	combi-modi: "window,drun,run,ssh";
+	line-padding: 3;
+	hide-scrollbar: true;
+	combi-hide-mode-prefix: true;
+	window-thumbnail: false;
+}
