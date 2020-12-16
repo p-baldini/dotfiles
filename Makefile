@@ -76,6 +76,7 @@ dependencies: # basic dependencies
 	$(UPGRADE)
 	$(INSTALL) util-linux-user # contains 'chsh' (i.e., change shell)
 	$(INSTALL) snapd # packaging and deployment system
+	sudo snap wait system seed.loaded
 	$(INSTALL) aria2 # download manager
 	$(INSTALL) git # version control software
 	$(INSTALL) patch # utility for modifying/upgrading files
