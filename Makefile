@@ -11,7 +11,6 @@ UPGRADE=sudo dnf upgrade -y
 # linux
 DOWNLOAD=`xdg-user-dir DOWNLOAD`
 PICTURES=`xdg-user-dir PICTURES`
-<<<<<<< HEAD
 
 # BUILD RULES
 
