@@ -1,3 +1,5 @@
+# tango_dark theme
+# credits: https://github.com/eendroroy/alacritty-theme
 colors:
   primary:
     background: '0x2e3436'
