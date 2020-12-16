@@ -1,4 +1,6 @@
+# Automatic setup
 `sudo dnf install -y make`<br>
+In home directory:<br>
 `git init`<br>
 `git remote add origin https://github.com/Mandrab/dotfiles`<br>
 `git fetch --all`<br>

@@ -36,7 +36,10 @@
 # KDE data
 .kde/
 # user specific data.. often useless
-.local/
+.local/*
+!.local/share
+.local/share/*
+!.local/share/applications
 # Maven data
 .m2/
 # Matlab application data
@@ -126,6 +129,7 @@ Videos/
 # EXCEPTIONS
 #######################################################
 
+!.config/alacritty
 !.config/bspwm
 !.config/git
 !.config/picom
