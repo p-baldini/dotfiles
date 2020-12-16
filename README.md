@@ -6,3 +6,6 @@ In home directory:<br>
 `git fetch --all`<br>
 `git checkout -t origin/BRANCH_NAME`<br>
 `make install` do not use 'sudo' because it will prevent access to user vars (e.g. HOME)
+
+# TODO list:
+- dnf-patcher have problems finding file to patch
