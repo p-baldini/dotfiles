@@ -137,3 +137,4 @@ Videos/
 !.config/polybar
 !.config/sxhkd
 !.config/ranger
+!.config/rofi

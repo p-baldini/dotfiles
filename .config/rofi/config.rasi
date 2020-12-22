@@ -1,0 +1,22 @@
+configuration {	
+	width: 75;
+	lines: 10;
+	location: 2;
+
+	modi: "drun,window,run,ssh";
+	fixed-num-lines: false;
+	show-icons: true;
+	combi-modi: "window,drun,run,ssh";
+	hide-scrollbar: true;
+	combi-hide-mode-prefix: true;
+	window-thumbnail: false;
+}
+
+* {
+	background-color: #C1B897;
+	border-color: #000000;
+	text-color: #505050;
+	
+	border-radius: 3;
+	padding: 3;
+}
