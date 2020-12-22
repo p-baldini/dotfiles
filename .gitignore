@@ -130,6 +130,7 @@ Videos/
 #######################################################
 
 !.config/alacritty
+!.config/autostart
 !.config/bspwm
 !.config/git
 !.config/picom

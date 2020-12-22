@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Mailspring
+Comment=Client email
+GenericName=Mail Client
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/mailspring_mailspring.desktop /var/lib/snapd/snap/bin/mailspring %U
+Icon=/var/lib/snapd/snap/mailspring/488/usr/share/pixmaps/mailspring.png
+Type=Application
+StartupNotify=true
+StartupWMClass=Mailspring
+Categories=GNOME;GTK;Network;Email;
+Keywords=email;internet;
+MimeType=x-scheme-handler/mailto;x-scheme-handler/mailspring;
+
