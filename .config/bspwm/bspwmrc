@@ -11,27 +11,16 @@ wmname LG3D
 feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpaper/default
 
 # keybinding daemon
-#sxhkd &
+sxhkd &
 
 # launch polybar
 $HOME/.config/polybar/launch.sh
-
-# Alter picom settings if using intel graphics
-GRAPHIC_CARD=$(lspci | grep -i "vga" | sed 's/.*://' | sed 's/(.*//' | sed 's/^[ \t]*//')
-if [[ $(echo $GRAPHIC_CARD | grep -i 'intel\|lenovo') != "" ]]; then MCODE='initrd=\intel-ucode.img'
-  sed -i 's/"xrender"/"glx"/' ~/.config/picom.conf
-  grep -q 'vsync = true;' ~/.config/picom.conf || echo 'vsync = true;' >> ~/.config/picom.conf
-fi
 
 #######################################################################################################
 #   CONFIGS
 #######################################################################################################
 
-# miscellaneous
-center = on
-
 # desktops
-workspaces_multimonitor & # creates and names desktops for multiple monitors TODOS
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
@@ -47,7 +36,7 @@ bspc config gapless_monocle     true
 
 # borders
 bspc config border_width        0
-bspc config borderless_monocle   true
+bspc config borderless_monocle  true
 
 # colors
 bspc config normal_border_color "#968e7a"
