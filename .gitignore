@@ -6,6 +6,8 @@
 .3T/
 # Audacity application data
 .audacity-data/
+# binaries folder
+.bin/
 # miscellaneous applications data
 .cache/
 # miscellaneous applications data - exclude what you need
@@ -137,3 +139,4 @@ Videos/
 !.config/sxhkd
 !.config/ranger
 !.config/rofi
+!.config/zsh
