@@ -97,6 +97,7 @@ Public/
 R/
 snap/
 Videos/
+__pycache__/
 
 #######################################################
 # FILES
@@ -126,6 +127,7 @@ Videos/
 .wget-hsts
 # credentials for authentication of X sessions
 .Xauthority
+.xsession-errors*
 
 #######################################################
 # EXCEPTIONS
