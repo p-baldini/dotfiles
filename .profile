@@ -1,17 +1,14 @@
-# $HOME/.profile
-
-#Set our umask
+# Set our umask
 umask 022
 
 # Set our default path
-PATH="/usr/local/sbin:/usr/local/bin:/usr/bin/core_perl:/usr/bin:$HOME/.config/bspwm/panel:$HOME/.bin"
 export BROWSER=/usr/bin/vivaldi-snapshot
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export EDITOR=/usr/bin/vim
 export GUI_EDITOR=/usr/bin/vim
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export PANEL_FIFO="/tmp/panel-fifo"
-export PATH
+export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/core_perl:/usr/bin/vendor_perl:/usr/bin/site_perl"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL=/usr/bin/alacritty
 export VISUAL=/usr/bin/code

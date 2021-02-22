@@ -1,35 +1,11 @@
 #!/bin/sh
-#
-# ~/.xinitrc
-#
-# Executed by startx (run your window manager from here)
 
-[[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
-
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
+## Executed by startx (run your window manager from here)
 
 # merge in defaults and keymaps
+xrdb -merge $HOME/.Xresources
 
-if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
-fi
-
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
-fi
-
-if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
-fi
-
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
-fi
-
-# start some nice programs
+## Start programs
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
@@ -37,6 +13,22 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     done
     unset f
 fi
-if [ $TERM = linux ] || [ -e "/etc/systemd/system/graphical.target.wants/xlogin@$(whoami).service" ] ; then
-    exec dbus-launch --sh-syntax --exit-with-session bspwm-session;;
-fi
+#if [ $TERM = linux ] || [ -e "/etc/systemd/system/graphical.target.wants/xlogin@$(whoami).service" ] ; then
+#    exec dbus-launch --sh-syntax --exit-with-session bspwm-session;;
+#fi
+
+## Load appearance settings TODO
+#xsetroot -cursor_name left_ptr &
+
+## Reduces flicker. Disabling saves resources.
+picom -b &
+
+## Automount removable media
+devmon &
+
+## Notification manager
+dunst &
+
+## Polkit agent
+/usr/bin/polkit-dumb-agent &
+
