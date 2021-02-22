@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=Ranger
 Comment=Text based file manager
-Exec=sh -c "$TERM -e /usr/bin/ranger"
-Icon="/usr/share/pixmaps/ranger.png"
-Terminal=false
+Exec=/usr/bin/ranger
+Icon=/usr/share/pixmaps/ranger.png
+Terminal=true
 Type=Application
 Categories=System;FileTools;FileManager;
