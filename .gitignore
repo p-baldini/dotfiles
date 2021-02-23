@@ -7,7 +7,11 @@
 # Audacity application data
 .audacity-data/
 # binaries folder
-.bin/
+.bin/*
+!.bin/oh-my-zsh/
+.bin/oh-my-zsh/*
+!.bin/oh-my-zsh/themes
+.bin/oh-my-zsh/themes/*
 # miscellaneous applications data
 .cache/
 # miscellaneous applications data - exclude what you need
@@ -133,6 +137,8 @@ __pycache__/
 # EXCEPTIONS
 #######################################################
 
+# customization of zsh theme
+!.bin/oh-my-zsh/themes/agnoster.zsh-theme
 !.config/alacritty
 !.config/bspwm
 !.config/git
