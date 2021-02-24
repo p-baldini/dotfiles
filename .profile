@@ -34,3 +34,8 @@ unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
+
+# Setup of java jdk through jabba
+[ -s "/home/mandrab/.jabba/jabba.sh" ] && source "/home/mandrab/.jabba/jabba.sh"
+jabba ls | head -n 1
+
