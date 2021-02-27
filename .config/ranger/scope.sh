@@ -87,6 +87,9 @@ case "$extension" in
     # ODT Files
     odt|ods|odp|sxw)
         try odt2txt "$path" && { dump | trim; exit 5; } || exit 1;;
+    # DOC Files
+    doc)
+    	try antiword "$path" && { dump | trim; exit 5; } || exit 1;;
     # HTML Pages:
     htm|html|xhtml)
         try w3m    -dump "$path" && { dump | trim | fmt -s -w $width; exit 4; }
