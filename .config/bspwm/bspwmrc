@@ -69,6 +69,7 @@ bspc rule -a Gimp desktop=8 state=floating follow=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Mailspring desktop=10 follow=off
 bspc rule -a vivaldi private=on
+bspc rule -a jade-Boot desktop=9 follow=off
 
 bspc rule -a gcolor2 state=floating center=true
 bspc rule -a lxappearance state=floating center=true
