@@ -37,5 +37,4 @@ unset MANPATH
 
 # Setup of java jdk through jabba
 [ -s "/home/mandrab/.jabba/jabba.sh" ] && source "/home/mandrab/.jabba/jabba.sh"
-jabba ls | head -n 1
-
+jabba use `jabba ls | head -n 1`
