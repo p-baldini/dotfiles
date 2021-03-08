@@ -29,8 +29,8 @@ alert = #BD2C40
 bottom = true
 
 ### Fonts
-font-0 = "Noto Sans:style=Regular"
-font-1 = "Hack Nerd Font:style=Regular:size=16"
+font-0 = "Noto Sans:style=Regular;2"
+font-1 = "Hack Nerd Font:style=Regular:size=16;2"
 
 ### Sizes
 width = 100%:-8
@@ -45,8 +45,6 @@ radius = 6.0
 
 ; bottom module-line height
 line-size = 3
-
-;module-margin-right = 1
 
 ### Colors
 background = ${colors.background}
