@@ -141,6 +141,7 @@ __pycache__/
 !.bin/oh-my-zsh/themes/agnoster.zsh-theme
 !.config/alacritty
 !.config/bspwm
+!.config/fontconfig
 !.config/git
 !.config/picom
 !.config/polybar
