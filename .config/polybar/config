@@ -115,10 +115,10 @@ type = internal/network
 interface = wlp7s0
 interval = 2
 
-format-connected-prefix = "直  "
+format-connected = %{A1:$TERM -e nmtui:}直  <label-connected>%{A}
 label-connected = %upspeed% %downspeed%
 
-format-disconnected = 睊
+format-disconnected = %{A1:$TERM -e nmtui:}睊  %{A}
 
 [module/eth]
 type = internal/network
