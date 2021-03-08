@@ -25,7 +25,7 @@ primary = #C3B89B
 secondary = #E60053
 alert = #BD2C40
 
-[bar/example]
+[bar/bottom]
 bottom = true
 
 ### Fonts
