@@ -56,7 +56,7 @@ line-color = #0F0000
 
 ### Positions
 modules-left = bspwm
-modules-right = xbacklight alsa memory cpu temperature wlan eth battery xkeyboard date
+modules-right = alsa memory cpu temperature wlan eth battery xkeyboard date
 
 ### Tray
 tray-position = right
@@ -114,41 +114,21 @@ label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = net1
-interval = 3
+interface = wlp7s0
+interval = 2
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = RETE %essid%
+format-connected-prefix = "直  "
+label-connected = %upspeed% %downspeed%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+format-disconnected = 睊
 
 [module/eth]
 type = internal/network
-interface = eno1
-interval = 3.0
+interface = enp8s0
+interval = 2
 
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-connected-prefix = " "
+label-connected = %upspeed% %downspeed%
 
 ################################################ DATE ###############################################
 
