@@ -76,7 +76,7 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 label-layout-underline = ${colors.secondary}
-label-indicator-on-capslock = %{B#FF0000}Caps Lock 
+label-indicator-on-capslock = %{B#FF0000} Caps Lock
 
 ############################################### BSPWM ###############################################
 
