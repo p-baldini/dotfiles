@@ -1,5 +1,5 @@
 # Dependencies and often used tools:
-- 7z antiword docx2txt nerd-fonts-hack odt2txt unrar polybar texlive-core
+- 7z alacritty antiword docx2txt feh fontconfig htop nerd-fonts-hack noto-fonts odt2txt unrar polybar python-simple-term-menu scrot texlive-core
 
 # TODO list:
 - change rofi to search .desktop files
