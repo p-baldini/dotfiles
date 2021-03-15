@@ -67,15 +67,6 @@ cursor-scroll = ns-resize
 ### Miscellaneous
 wm-restack = bspwm
 
-############################################# KEYBOARD #############################################
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-label-layout-underline = ${colors.secondary}
-label-indicator-on-capslock = %{B#FF0000} Caps Lock
-
 ############################################### BSPWM ###############################################
 
 [module/bspwm]
@@ -99,14 +90,49 @@ label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
+############################################### VOLUME ##############################################
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <ramp-volume> <label-volume>
+format-muted = 婢 <label-muted>
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
+
 ############################################### MEMORY ##############################################
 
 [module/memory]
 type = internal/memory
 interval = 2
 
+format = %{A1:$TERM -e gtop:} <label>%{A}
 format-underline = #4BFFDC
-label =  %percentage_used%%
+label = %percentage_used%%
+
+################################################ CPU ################################################
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+
+format = %{A1:$TERM -e gtop:}  <label>,%{A}
+
+############################################ TEMPERATURE ############################################
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+interval = 2
+
+format-warn-underline = ${colors.secondary}
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${colors.secondary}
 
 ############################################## NETWORK ##############################################
 
@@ -127,28 +153,6 @@ interval = 2
 
 format-connected-prefix = " "
 label-connected = %upspeed% %downspeed%
-
-################################################ DATE ###############################################
-
-[module/date]
-type = internal/date
-
-date = "%Y-%m-%d"
-time = %H:%M
-
-label = %date% %time%
-
-############################################### VOLUME ##############################################
-
-[module/alsa]
-type = internal/alsa
-
-format-volume = <ramp-volume> <label-volume>
-format-muted = 婢 <label-muted>
-
-ramp-volume-0 = 奄
-ramp-volume-1 = 奔
-ramp-volume-2 = 墳
 
 ############################################## BATTERY ##############################################
 
@@ -175,27 +179,25 @@ ramp-capacity-7 = %{F#87E100}
 ramp-capacity-8 = %{F#5AE100}
 ramp-capacity-9 = %{F#2DE100}
 
-################################################ CPU ################################################
+############################################# KEYBOARD #############################################
 
-[module/cpu]
-type = internal/cpu
-interval = 2
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
 
-format =   <label>,
+label-layout-underline = ${colors.secondary}
+label-indicator-on-capslock = %{B#FF0000} Caps Lock
 
-############################################ TEMPERATURE ############################################
+################################################ DATE ###############################################
 
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-interval = 2
+[module/date]
+type = internal/date
 
-format-warn-underline = ${colors.secondary}
+date = "%Y-%m-%d"
+time = %H:%M
 
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label = %date% %time%
+
 
 [module/powermenu]
 type = custom/menu
