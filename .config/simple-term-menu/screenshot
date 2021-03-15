@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+import os
+
+from simple_term_menu import TerminalMenu
+
+SCROT = 'scrot --quality 100'
+SCROT_OUTPUT = '~/Pictures/screenshot/%b%d::%H%M%S.png'
+
+def main():
+    main_menu_title = "  Screenshot\n"
+    main_menu_items = [
+        "Desktop",
+        "Focused Window",
+        "Area",
+        "Quit"
+    ]
+    main_menu_actions = {
+        0: lambda: os.system(SCROT + ' --delay 0.2 --pointer --multidisp ' + SCROT_OUTPUT),
+        1: lambda: os.system(SCROT + ' --delay 0.2 --pointer --focused ' + SCROT_OUTPUT),
+        2: lambda: os.system(SCROT + ' --select ' + SCROT_OUTPUT),
+        3: lambda: None,
+    }
+    main_menu_cursor = "> "
+    main_menu_exit = False
+
+    main_menu = TerminalMenu(
+        menu_entries=main_menu_items,
+        title=main_menu_title,
+        menu_cursor=main_menu_cursor,
+        cycle_cursor=True,
+        clear_screen=True,
+    )
+
+    entry = main_menu.show()
+
+    main_menu_actions[entry]()
+
+if __name__ == "__main__":
+    main()

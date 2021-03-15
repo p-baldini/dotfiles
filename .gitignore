@@ -145,6 +145,7 @@ __pycache__/
 !.config/git
 !.config/picom
 !.config/polybar
+!.config/simple-term-menu
 !.config/sxhkd
 !.config/ranger
 !.config/rofi
