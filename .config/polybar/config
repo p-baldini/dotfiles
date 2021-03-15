@@ -109,7 +109,6 @@ type = internal/memory
 interval = 2
 
 format = %{A1:$TERM -e htop:} <label>%{A}
-format-underline = #4BFFDC
 label = %percentage_used%%
 
 ################################################ CPU ################################################
