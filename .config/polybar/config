@@ -108,7 +108,7 @@ ramp-volume-2 = 墳
 type = internal/memory
 interval = 2
 
-format = %{A1:$TERM -e gtop:} <label>%{A}
+format = %{A1:$TERM -e htop:} <label>%{A}
 format-underline = #4BFFDC
 label = %percentage_used%%
 
@@ -118,7 +118,7 @@ label = %percentage_used%%
 type = internal/cpu
 interval = 2
 
-format = %{A1:$TERM -e gtop:}  <label>,%{A}
+format = %{A1:$TERM -e htop:}  <label>,%{A}
 
 ############################################ TEMPERATURE ############################################
 
