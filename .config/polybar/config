@@ -54,7 +54,7 @@ line-color = #0F0000
 
 ### Positions
 modules-left = bspwm
-modules-right = alsa memory cpu temperature wlan eth battery xkeyboard date
+modules-right = alsa memory cpu temperature wlan eth battery xkeyboard screenshot date
 
 ### Tray
 tray-position = right
@@ -188,6 +188,18 @@ blacklist-0 = num lock
 label-layout-underline = ${colors.secondary}
 label-indicator-on-capslock = %{B#FF0000} Caps Lock
 
+############################################# SCREENSHOT #####################################
+#######
+
+[module/screenshot]
+type = custom/script
+
+format = %{A1:$TERM --class ,Screenshot -e ~/.config/simple-term-menu/screenshot:} %{A}
+
+; module requires a return from exec. Since i'm not interested let's execute once in an hour
+exec = echo " "
+interval = 5
+
 ################################################ DATE ###############################################
 
 [module/date]
@@ -197,6 +209,9 @@ date = "%Y-%m-%d"
 time = %H:%M
 
 label = %date% %time%
+
+############################################## SETTINGS ######################################
+#######
 
 [settings]
 ; reload on notifics
