@@ -123,7 +123,7 @@ format = %{A1:$TERM -e htop:}  <label>,%{A}
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
+thermal-zone = 6
 warn-temperature = 60
 interval = 2
 
