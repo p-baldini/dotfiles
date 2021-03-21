@@ -82,7 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-# Launch jabba setupper
-[ -s "/home/mandrab/.jabba/jabba.sh" ] && source "/home/mandrab/.jabba/jabba.sh"
-
-alias vim="vim -i $HOME/.cache/vim/.viminfo" 
+# Setup of java jdk through jabba
+[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
+jabba use `jabba ls | head -n 1`

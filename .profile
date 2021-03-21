@@ -7,6 +7,7 @@ export BSPWM_SOCKET="/tmp/bspwm-socket"
 export EDITOR=/usr/bin/vim
 export GUI_EDITOR=/usr/bin/vim
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export LESSHISTFILE="$HOME/.cache"
 export PANEL_FIFO="/tmp/panel-fifo"
 export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/core_perl:/usr/bin/vendor_perl:/usr/bin/site_perl"
 export QT_QPA_PLATFORMTHEME="qt5ct"
@@ -34,7 +35,3 @@ unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
-
-# Setup of java jdk through jabba
-[ -s "/home/mandrab/.jabba/jabba.sh" ] && source "/home/mandrab/.jabba/jabba.sh"
-jabba use `jabba ls | head -n 1`
