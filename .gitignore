@@ -6,12 +6,6 @@
 .3T/
 # Audacity application data
 .audacity-data/
-# binaries folder
-.bin/*
-!.bin/oh-my-zsh/
-.bin/oh-my-zsh/*
-!.bin/oh-my-zsh/themes
-.bin/oh-my-zsh/themes/*
 # miscellaneous applications data
 .cache/
 # miscellaneous applications data - exclude what you need
@@ -46,6 +40,10 @@
 !.local/share
 .local/share/*
 !.local/share/applications
+!.local/share/oh-my-zsh
+.local/share/oh-my-zsh/*
+!.local/share/oh-my-zsh/themes
+.local/share/oh-my-zsh/themes/*
 # Maven data
 .m2/
 # Matlab application data
@@ -138,7 +136,7 @@ __pycache__/
 #######################################################
 
 # customization of zsh theme
-!.bin/oh-my-zsh/themes/agnoster.zsh-theme
+!.local/share/oh-my-zsh/themes/agnoster.zsh-theme
 !.config/alacritty
 !.config/bspwm
 !.config/fontconfig

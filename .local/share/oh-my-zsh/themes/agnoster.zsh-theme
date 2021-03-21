@@ -11,11 +11,6 @@
 # uses changed in 2012, and older versions will display incorrectly,
 # in confusing ways.
 #
-# In addition, I recommend the
-# [Solarized theme](https://github.com/altercation/solarized/) and, if you're
-# using it on Mac OS X, [iTerm 2](https://iterm2.com/) over Terminal.app -
-# it has significantly better color fidelity.
-#
 # If using with "light" variant of the Solarized color schema, set
 # SOLARIZED_THEME variable to "light". If you don't specify, we'll assume
 # you're using the "dark" variant.
