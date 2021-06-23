@@ -10,6 +10,8 @@
 .cache/
 # miscellaneous applications data - exclude what you need
 .config/*
+!.config/autostart
+.config/autostart/*
 .dbus/
 # Docker application data
 .docker/
@@ -138,6 +140,7 @@ __pycache__/
 # customization of zsh theme
 !.local/share/oh-my-zsh/themes/agnoster.zsh-theme
 !.config/alacritty
+!.config/autostart/mailspring.desktop
 !.config/bspwm
 !.config/fontconfig
 !.config/git
