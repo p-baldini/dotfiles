@@ -45,3 +45,21 @@ LilyKeyboardDeviceID=`xinput -list | grep Lily58 | awk '{print $4}' | grep -v 'L
 if [[ ! -z "$LilyKeyboardDeviceID" ]]; then
 	setxkbmap -device $LilyKeyboardDeviceID -layout us
 fi
+
+# This script exec all the other script files in the folder
+FOLDER="$XDG_CONFIG_HOME/autostart"
+
+for FILE in `ls "$FOLDER/$FILE"`; do
+	if [[ -d "$FOLDER/$FILE" ]]; then
+		break
+	fi
+	if [[ -x "$FOLDER/$FILE" ]]; then
+		echo "Executing $FILE script"
+		sh "$FOLDER/$FILE"
+	fi
+	if [[ "$FOLDER/$FILE" == *.desktop ]]; then
+		echo "Starting startup application $FILE"
+		gtk-launch "$FILE"
+	fi
+done
+
