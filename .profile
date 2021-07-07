@@ -40,12 +40,6 @@ unset MANPATH
 [ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
 jabba use `jabba ls | head -n 1`
 
-# keyboard setups
-LilyKeyboardDeviceID=`xinput -list | grep Lily58 | awk '{print $4}' | grep -v 'Lily58' | awk '{gsub(/[A-Z,a-z,=, ]/,"")}1' | grep '[0-9]' | sort`
-if [[ ! -z "$LilyKeyboardDeviceID" ]]; then
-	setxkbmap -device $LilyKeyboardDeviceID -layout us
-fi
-
 # This script exec all the other script files in the folder
 FOLDER="$XDG_CONFIG_HOME/autostart"
 

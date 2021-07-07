@@ -141,6 +141,7 @@ __pycache__/
 !.local/share/oh-my-zsh/themes/agnoster.zsh-theme
 !.config/alacritty
 !.config/autostart/mailspring.desktop
+!.config/autostart/set_keyboard.sh
 !.config/bspwm
 !.config/fontconfig
 !.config/git
