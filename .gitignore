@@ -158,8 +158,6 @@ __pycache__/
 !.gtkrc*.mine
 !.local/share/applications/mailspring.desktop
 !.local/share/applications/ranger.desktop
-# customization of zsh theme
-!.local/share/oh-my-zsh/themes/agnoster.zsh-theme
 !.config/alacritty
 !.config/autostart/mailspring.desktop
 !.config/autostart/set_keyboard.sh
