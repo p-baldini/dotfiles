@@ -163,6 +163,7 @@ __pycache__/
 !.config/alacritty
 !.config/autostart/mailspring.desktop
 !.config/autostart/set_keyboard.sh
+!.config/autostart/config_missing.sh
 !.config/bspwm
 !.config/fontconfig
 !.config/git
