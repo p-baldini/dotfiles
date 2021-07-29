@@ -1,7 +1,6 @@
-# vim:ft=zsh ts=2 sw=2 sts=2
-#
-# agnoster's Theme - https://gist.github.com/3712874
-# A Powerline-inspired theme for ZSH
+# Mandrab Theme - https://github.com/Mandrab/dotfiles/blob/arch-bspwm/.config/zsh/themes/mandrab.zsh-theme
+# Customization of 'Agnoster Theme' to allow compact path-prints with only directory starting letter (except for actual one).
+# This customization wants to mimick the path-print of default fish shell's theme.
 #
 # # README
 #
