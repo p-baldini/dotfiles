@@ -1,5 +1,11 @@
-# Set our umask
-umask 022
+#!/bin/sh
+
+##
+## Executed by lightdm at startup
+## It execute also bspwm automatically: no need to specify
+##
+
+## SESSION SETTINGS
 
 # Set our default path
 export BROWSER=/usr/bin/vivaldi-snapshot
@@ -9,7 +15,8 @@ export GUI_EDITOR=/usr/bin/vim
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export LESSHISTFILE="$HOME/.cache"
 export PANEL_FIFO="/tmp/panel-fifo"
-export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/core_perl:/usr/bin/vendor_perl:/usr/bin/site_perl:/usr/share/pk2:$HOME/.local/share/gem/ruby/2.7.0/bin"
+export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/core_perl:/usr/bin/vendor_perl:/
+usr/bin/site_perl:/usr/share/pk2:$HOME/.local/share/gem/ruby/2.7.0/bin"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL=/usr/bin/alacritty
 export VISUAL=/usr/bin/code
@@ -17,24 +24,24 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export ZDOTDIR=.config/zsh
 
-# Load profiles from /etc/profile.d
-if test -d /etc/profile.d/; then
-	for profile in /etc/profile.d/*.sh; do
-		test -r "$profile" && . "$profile"
-	done
-	unset profile
-fi
-
-# Source global bash config
-if test "$PS1" && test "$BASH" && test -r /etc/bash.bashrc; then
-	. /etc/bash.bashrc
-fi
-
 # Termcap is outdated, old, and crusty, kill it.
 unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
+
+## DEMONS STARTUP
+
+# Automount removable media
+devmon &
+
+# Notification manager
+dunst &
+
+# Polkit agent
+/usr/bin/polkit-dumb-agent &
+
+## APPLICATIONS STARTUP
 
 # Setup of java jdk through jabba
 [ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
@@ -56,4 +63,3 @@ for FILE in `ls "$FOLDER/$FILE"`; do
 		gtk-launch "$FILE"
 	fi
 done
-

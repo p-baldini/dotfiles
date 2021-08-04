@@ -7,14 +7,17 @@
 # needed to make java GUI works https://bit.ly/2ycKpYD
 wmname LG3D
 
-# set wallpaper
-feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpaper/default
-
 # keybinding daemon
 sxhkd &
 
-# launch polybar
-$HOME/.config/polybar/launch.sh
+# compositor. Reduces flicker. Disabling saves resources.
+picom -b --experimental-backends --backend glx &
+
+# wallpaper manager
+feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpaper/default
+
+# bottom start bar
+polybar bottom >> /tmp/polybar.log 2>&1 &
 
 #######################################################################################################
 #   CONFIGS
