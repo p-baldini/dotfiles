@@ -75,6 +75,7 @@ bspc rule -a MainKt state=floating
 bspc rule -a Screenkey manage=off
 bspc rule -a Screenshot state=floating follow=on rectangle=180x150+1730+890
 bspc rule -a Vivaldi-snapshot private=on
+bspc rule -a Zathura state=tiled
 
 bspc rule -a gcolor2 state=floating center=true
 bspc rule -a lxappearance state=floating center=true
