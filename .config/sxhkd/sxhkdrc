@@ -8,7 +8,7 @@ super + Return
 
 # start program launcher and polybar(s)
 super + space
-	xdo show -N Polybar; xdo raise -N Polybar; rofi -show drun && xdo hide -N Polybar
+	.config/virtualbar/launch.sh
 
 # open ranger file manager
 super + r
