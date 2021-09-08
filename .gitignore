@@ -163,6 +163,7 @@ __pycache__/
 !.config/autostart/set_keyboard.sh
 !.config/autostart/config_missing.sh
 !.config/bspwm
+!.config/dunst
 !.config/fontconfig
 !.config/git
 !.config/picom
