@@ -12,7 +12,7 @@ super + space
 
 # toggle polybar(s) state (i.e. visible/invisible)
 super + p
-	echo "cmd:toggle" >`ps ax | grep polybar | grep -v grep | grep -v awk | awk '\{print "/tmp/polybar_mqueue." $1\}'`
+	echo "cmd:toggle" >`ps ax | grep polybar | grep -v grep | grep -v awk | awk '\{print "/tmp/polybar_mqueue." $1\}'`; xdo raise -N Polybar
 
 # open ranger file manager
 super + r
