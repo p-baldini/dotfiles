@@ -1,22 +1,128 @@
-configuration {	
-	width: 75;
-	lines: 10;
-	location: 2;
-
-	modi: "drun,window,run,ssh";
-	fixed-num-lines: false;
-	show-icons: true;
-	combi-modi: "window,drun,run,ssh";
-	hide-scrollbar: true;
-	combi-hide-mode-prefix: true;
-	window-thumbnail: false;
+configuration {
+    location: 						1;
+    fixed-num-lines: 					true;
+    show-icons: 					true;
+    sidebar-mode: 					true;
+    scroll-method: 					0;
+    click-to-exit: 					true;
 }
 
+@import "colors.rasi"
+
 * {
-	background-color: #C1B897;
-	border-color: #000000;
-	text-color: #505050;
-	
-	border-radius: 3;
-	padding: 3;
+    background-color:             			@bg;
+}
+
+window {
+    background-color:					@bg;
+    border: 						0px;
+    padding: 						10px;
+    width: 						23%;
+    height: 						94%;
+}
+
+entry {
+    spacing:    					0;
+    border:						0 0 2 0px;
+    border-color:					@fg;
+    padding:						3px;
+    text-color: 					@fg;
+}
+
+inputbar {
+    padding: 						0 10px 0 10px;
+    children: 						[ entry ];
+}
+
+listview {
+    border: 						0px;
+    spacing: 						5px;
+    scrollbar: 						false;
+    padding: 						15px 5px 0px 5px;
+}
+
+element-text {
+    background-color:					#00000000;
+    text-color:       					inherit;
+}
+
+element {
+    border: 						0px;
+    border-radius: 					5px;
+    padding: 						5px;
+}
+
+element normal.normal {
+    background-color: 					@bg;
+    text-color:       					@fg;
+}
+
+element normal.urgent {
+    background-color: 					@bg;
+    text-color:       					@red;
+}
+
+element normal.active {
+    background-color: 					@green;
+    text-color:       					@bg;
+}
+
+element selected.normal {
+    background-color: 					@ac;
+    text-color:       					@bg;
+}
+
+element selected.urgent {
+    background-color: 					@bg;
+    text-color:       					@red;
+}
+
+element selected.active {
+    background-color: 					@ac;
+    text-color:       					@bg;
+}
+
+element alternate.normal {
+    background-color: 					@bg;
+    text-color:       					@fg;
+}
+
+element alternate.urgent {
+    background-color: 					@bg;
+    text-color:       					@fg;
+}
+
+element alternate.active {
+    background-color: 					@bg;
+    text-color:       					@fg;
+}
+
+button {
+    horizontal-align:               			0.5;
+    vertical-align:                 			0.5;
+    background-color:             			@red;
+    margin: 						5px;
+    padding: 						5px;
+    text-color: 					@fg;
+    border: 						0px;
+    border-radius: 					4px;
+    border-color: 					@fg;
+}
+
+button selected {
+    background-color:             			@green;
+    text-color: 					@fg;
+    border: 						0px;
+    border-radius: 					4px;
+    border-color: 					@fg;
+}
+
+message {
+    border: 						0px;
+    border-color: 					@ac;
+    padding: 						1px;
+}
+
+textbox {
+    text-color: 					@fg;
 }

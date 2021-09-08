@@ -17,13 +17,13 @@
 ;====================================================================================================
 
 [colors]
-background = #B54E8888
-background-alt = #040404
-foreground = #FFFFFF
-foreground-alt = #CFC9A7
-primary = #C3B89B
-secondary = #E60053
-alert = #BD2C40
+background = 		#334963
+background-alt = 	#040404
+foreground = 		#FFFFFFcc
+foreground-alt = 	#CFC9A7
+primary = 		#C3B89B
+secondary = 		#E60053
+alert = 		#BD2C40
 
 ############################################### CONTROL ###############################################
 
@@ -65,7 +65,7 @@ font-1 = "Hack Nerd Font:style=Regular:size=16;2"
 
 ### Sizes
 width = 23%
-height = 3%
+height = 3%:+1
 
 ; bar 'positioning'
 offset-y = 3%
