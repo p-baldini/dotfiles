@@ -25,7 +25,9 @@ primary = #C3B89B
 secondary = #E60053
 alert = #BD2C40
 
-[bar/bottom]
+############################################### CONTROL ###############################################
+
+[bar/control]
 bottom = true
 
 ### Fonts
@@ -33,39 +35,55 @@ font-0 = "Noto Sans:style=Regular;2"
 font-1 = "Hack Nerd Font:style=Regular:size=16;2"
 
 ### Sizes
-width = 100%:-8
-height = 28
-
-; bar 'borders'
-offset-x = 4
-offset-y = 4
-
-; corners radius (do not use with borders)
-radius = 6.0
-
-; bottom module-line height
-line-size = 3
+width = 23%
+height = 3%
 
 ### Colors
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-color = #0F0000
-
 ### Positions
 modules-left = bspwm
-modules-right = alsa memory cpu temperature wlan eth battery xkeyboard screenshot date
-
-### Tray
-tray-position = right
-tray-padding = 2
+modules-center = date
 
 ### Cursor render
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-### Miscellaneous
-wm-restack = bspwm
+override-redirect = true
+
+enable-ipc = true
+
+############################################### STATUS ###############################################
+
+[bar/status]
+bottom = true
+
+### Fonts
+font-0 = "Noto Sans:style=Regular;2"
+font-1 = "Hack Nerd Font:style=Regular:size=16;2"
+
+### Sizes
+width = 23%
+height = 3%
+
+; bar 'positioning'
+offset-y = 3%
+
+### Colors
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+### Positions
+modules-left = alsa cpu temperature wlan eth battery
+
+### Cursor render
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+override-redirect = true
+
+enable-ipc = true
 
 ############################################### BSPWM ###############################################
 
@@ -73,7 +91,7 @@ wm-restack = bspwm
 type = internal/bspwm
 
 format-padding = 0
-
+radius = 10px
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
@@ -101,15 +119,6 @@ format-muted = 婢 <label-muted>
 ramp-volume-0 = 奄
 ramp-volume-1 = 奔
 ramp-volume-2 = 墳
-
-############################################### MEMORY ##############################################
-
-[module/memory]
-type = internal/memory
-interval = 2
-
-format = %{A1:$TERM -e htop:} <label>%{A}
-label = %percentage_used%%
 
 ################################################ CPU ################################################
 
@@ -177,15 +186,6 @@ ramp-capacity-6 = %{F#B4E100}
 ramp-capacity-7 = %{F#87E100}
 ramp-capacity-8 = %{F#5AE100}
 ramp-capacity-9 = %{F#2DE100}
-
-############################################# KEYBOARD #############################################
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-label-layout-underline = ${colors.secondary}
-label-indicator-on-capslock = %{B#FF0000} Caps Lock
 
 ############################################# SCREENSHOT #####################################
 #######
