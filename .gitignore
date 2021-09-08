@@ -172,4 +172,5 @@ __pycache__/
 !.config/sxhkd
 !.config/ranger
 !.config/rofi
+!.config/virtualbar
 !.config/zsh
