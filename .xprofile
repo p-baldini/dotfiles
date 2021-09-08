@@ -48,7 +48,7 @@ dunst &
 jabba use `jabba ls | head -n 1`
 
 # This script exec all the other script files in the folder
-FOLDER="$XDG_CONFIG_HOME/autostart"
+FOLDER="$HOME/.autostart"
 
 for FILE in `ls "$FOLDER/$FILE"`; do
 	if [[ -d "$FOLDER/$FILE" ]]; then
