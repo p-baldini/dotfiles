@@ -16,8 +16,11 @@ picom -b --experimental-backends --backend glx &
 # wallpaper manager
 feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpaper/default
 
-# bottom start bar
-polybar bottom >> /tmp/polybar.log 2>&1 &
+# system bar(s)
+polybar control &
+polybar status &
+echo "cmd:toggle" > /tmp/polybar_mqueue.`xdo pid -m -a "polybar-control_eDP-1"`
+echo "cmd:toggle" > /tmp/polybar_mqueue.`xdo pid -m -a "polybar-status_eDP-1"`
 
 #######################################################################################################
 #   CONFIGS
@@ -72,8 +75,6 @@ bspc rule -a Gimp desktop=8 state=floating follow=on
 bspc rule -a jade-Boot desktop=9 follow=off
 bspc rule -a Mailspring desktop=10 follow=off
 bspc rule -a MainKt state=floating
-bspc rule -a Screenkey manage=off
-bspc rule -a Screenshot state=floating follow=on rectangle=180x150+1730+890
 bspc rule -a Vivaldi-snapshot private=on
 bspc rule -a Zathura state=tiled
 
