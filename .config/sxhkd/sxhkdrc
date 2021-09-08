@@ -2,25 +2,25 @@
 #	WM INDEPENDENT HOTKEYS
 #######################################################################################################
 
-# terminal emulator
+# open terminal emulator
 super + Return
 	$TERMINAL
 
-# make sxhkd reload its configuration files
-super + Escape
-	pkill -USR1 -x sxhkd
-
-# program launcher
+# start program launcher
 super + space
 	rofi -show drun
 
-# ranger file manager
+# toggle polybar(s) state (i.e. visible/invisible)
+super + p
+	echo "cmd:toggle" >`ps ax | grep polybar | grep -v grep | grep -v awk | awk '\{print "/tmp/polybar_mqueue." $1\}'`
+
+# open ranger file manager
 super + r
 	$TERMINAL -e ranger
 
-# vivaldi browser
+# open vivaldi browser
 super + v
-	vivaldi-snapshot
+	$BROWSER
 
 #######################################################################################################
 #	KEYBOARD MEDIA KEYS
