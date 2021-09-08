@@ -6,13 +6,9 @@
 super + Return
 	$TERMINAL
 
-# start program launcher
+# start program launcher and polybar(s)
 super + space
-	rofi -show drun
-
-# toggle polybar(s) state (i.e. visible/invisible)
-super + p
-	echo "cmd:toggle" >`ps ax | grep polybar | grep -v grep | grep -v awk | awk '\{print "/tmp/polybar_mqueue." $1\}'`; xdo raise -N Polybar
+	xdo show -N Polybar; rofi -show drun && xdo hide -N Polybar
 
 # open ranger file manager
 super + r

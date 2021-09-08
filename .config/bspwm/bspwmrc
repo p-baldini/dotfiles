@@ -19,8 +19,8 @@ feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpape
 # system bar(s)
 polybar control &
 polybar status &
-echo "cmd:toggle" > /tmp/polybar_mqueue.`xdo pid -m -a "polybar-control_eDP-1"`
-echo "cmd:toggle" > /tmp/polybar_mqueue.`xdo pid -m -a "polybar-status_eDP-1"`
+xdo hide -m -a "polybar-control_eDP-1"
+xdo hide -m -a "polybar-status_eDP-1"
 
 #######################################################################################################
 #   CONFIGS
