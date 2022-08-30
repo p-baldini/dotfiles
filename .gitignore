@@ -17,6 +17,8 @@
 .config/*
 !.config/autostart
 .config/autostart/*
+# CuPy kernel cache
+.cupy/
 .dbus/
 # Docker application data
 .docker/
@@ -124,6 +126,8 @@ __pycache__/
 .bash_logout
 .bash_profile
 .bashrc
+# ZSH cache for autocompletion
+.config/zsh/.zcompdump*
 # PulseAudio file
 .esd_auth
 # Feh unwanted file
