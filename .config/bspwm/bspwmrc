@@ -71,7 +71,7 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 #autogap &
 
 # exception rules
-bspc rule -a Alacritty:InfoBox state=floating follow=on rectangle=442x220+0+800
+bspc rule -a InfoBox state=floating follow=on rectangle=442x220+0+800
 bspc rule -a Gimp desktop=8 state=floating follow=on
 bspc rule -a jade-Boot desktop=9 follow=off
 bspc rule -a BlueMail desktop=10 follow=off
