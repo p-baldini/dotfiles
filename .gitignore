@@ -7,6 +7,8 @@
 # Arduino IDEs files
 .arduino15/
 .arduinoProIDE/
+# Argos simulator
+.argos3/
 # Audacity application data
 .audacity-data/
 # Ruby bundle
@@ -24,6 +26,8 @@
 .docker/
 # Eclipse application data
 .eclipse/
+# Electron
+.electron-gyp/
 # Ruby package manager
 .gem/
 # Gnome application data
@@ -33,6 +37,7 @@
 # Gradle application data
 .gradle/
 # Intellij Idea application data
+.idea/
 .idea-build/
 # A dependency manager application data
 .ivy2/
@@ -42,6 +47,8 @@
 .jason/
 # Java data
 .java/
+# Julia language folder
+.julia/
 # KDE data
 .kde/
 # user specific data.. often useless
@@ -58,8 +65,12 @@
 .m2/
 # Matlab application data
 .matlab/
+# Minecraft game folder
+.minecraft/
 # Mozilla data
 .mozilla/
+# Markdown preview for vscode / atom
+.mume/
 # npm application data
 .npm/
 # JavaFX data
@@ -88,12 +99,11 @@
 .subversion/
 # TexLive versions data
 .texlive*/
-# Vim data
-.vim/
 # VMWare application data
 .vmware/
 # VSCode application data
 .vscode/
+.vscode-oss/
 # Xournal++ usage data (autosaves etc.)
 .xournalpp/
 # Zoom meetings application data
@@ -115,6 +125,7 @@ Public/
 R/
 snap/
 Videos/
+vmware/
 __pycache__/
 
 #######################################################
@@ -140,6 +151,8 @@ __pycache__/
 .mupdf.history
 # NVidia settings file - TODO to evaluate
 .nvidia-settings-rc
+# Python commands history
+.python_history
 # Steam files
 .steampath
 .steampid
