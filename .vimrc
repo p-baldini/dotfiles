@@ -10,12 +10,6 @@
 "	      for Haiku:  ~/config/settings/vim/vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
-" When started as "evim", evim.vim will already have done these settings, bail
-" out.
-if v:progname =~? "evim"
-  finish
-endif
-
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
@@ -51,5 +45,15 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+" set line number visible
 set number
+
+" activate the autoindent and smartindend and set the default width to 4
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set expandtab
+set smartindent
+
+" set vim theme
 colorscheme solarized8
