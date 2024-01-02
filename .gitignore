@@ -21,6 +21,8 @@
 .config/autostart/*
 # CuPy kernel cache
 .cupy/
+# C-Python extension folder
+.cython/
 .dbus/
 # Docker application data
 .docker/
@@ -28,6 +30,8 @@
 .eclipse/
 # Electron
 .electron-gyp/
+# Flatpack settings folder
+.fltk/
 # Ruby package manager
 .gem/
 # Gnome application data
@@ -39,6 +43,8 @@
 # Intellij Idea application data
 .idea/
 .idea-build/
+# Phython interactive shell folder
+.ipython/
 # A dependency manager application data
 .ivy2/
 # Jabba's JDKs
@@ -49,6 +55,8 @@
 .java/
 # Julia language folder
 .julia/
+# Jupyter notebook folder
+.jupyter/
 # KDE data
 .kde/
 # user specific data.. often useless
