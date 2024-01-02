@@ -19,6 +19,7 @@
 .config/*
 !.config/autostart
 .config/autostart/*
+.config/zsh/plugins/*
 # CuPy kernel cache
 .cupy/
 # C-Python extension folder
