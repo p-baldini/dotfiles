@@ -8,15 +8,17 @@
 ## SESSION SETTINGS
 
 # Set our default path
+#export ARGOS_PLUGIN_PATH=$HOME/.argos3/build_simulator/plugins:/usr/local/lib/argos3:/home/mandrab/Documents/hd_documents/projects/argos-experiments/library/nnsc/lib
 export BROWSER=/usr/bin/vivaldi-snapshot
 export BSPWM_SOCKET="/tmp/bspwm-socket"
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export EDITOR=/usr/bin/vim
-export GUI_EDITOR=/usr/bin/vim
+export GUI_EDITOR=/usr/bin/code
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export LD_LIBRARY_PATH="/opt/cuda:/opt/cuda/lib64:/opt/cuda/targets/x86_64-linux/lib/:/usr/local/lib"
 export LESSHISTFILE="$HOME/.cache"
 export PANEL_FIFO="/tmp/panel-fifo"
-export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/core_perl:/usr/bin/vendor_perl:/
-usr/bin/site_perl:/usr/share/pk2:$HOME/.local/share/gem/ruby/2.7.0/bin"
+export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/core_perl:/usr/bin/vendor_perl:/usr/bin/site_perl:/usr/share/pk2:$HOME/.local/share/gem/ruby/2.7.0/bin:/usr/local/lib/argos3:$HOME/argos3/build_simulator"
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export TERMINAL=/usr/bin/alacritty
 export VISUAL=/usr/bin/code
@@ -29,6 +31,9 @@ unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
+
+## ALIASES
+alias python=python3.10
 
 ## DEMONS STARTUP
 
@@ -50,7 +55,7 @@ jabba use `jabba ls | head -n 1`
 # This script exec all the other script files in the folder
 FOLDER="$HOME/.autostart"
 
-for FILE in `ls "$FOLDER/$FILE"`; do
+for FILE in `ls "$FOLDER"`; do
 	if [[ -d "$FOLDER/$FILE" ]]; then
 		break
 	fi
