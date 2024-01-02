@@ -99,6 +99,8 @@
 .subversion/
 # TexLive versions data
 .texlive*/
+# Thunderbird generated files
+.thunderbird/
 # VMWare application data
 .vmware/
 # VSCode application data
