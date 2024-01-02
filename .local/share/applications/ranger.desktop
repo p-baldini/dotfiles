@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Ranger
-Comment=Text based file manager
-Exec=/usr/bin/ranger
-Icon=/usr/share/pixmaps/ranger.png
-Terminal=true
-Type=Application
-Categories=System;FileTools;FileManager;
