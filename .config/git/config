@@ -1,7 +1,9 @@
 [user]
-	email = paolobaldini01@gmail.com
-	name = Paolo Baldini
-[init]
-	defaultBranch = master
+    email = paolo.baldini.phd@gmail.com
+    name = Paolo Baldini
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    helper = !/usr/bin/gh auth git-credential
+[init]
+    defaultBranch = master
+[pull]
+    rebase = false
