@@ -1,0 +1,31 @@
+#|/bin/sh
+
+# check if the docker service is running and exit with a dunst notification
+if [[ -z `systemctl status docker.service | grep "active (running)"` ]]
+then
+    notify-send "Julia-Docker ERROR" "Docker service not detected"
+    exit
+fi
+
+# if no suitable julia image exists, build one
+if [[ -z `docker images | grep julia-datascience` ]]
+then
+    docker pull julia:1.10.6
+    docker run -dt --network=host --name="julia-container" julia
+    docker exec julia-container 'using Pkg; Pkg.add("Plots"); Pkg.add("Statistics"); Pkg.add("StatsBase"); Pkg.add("StatsPlots")'
+    docker commit julia-container julia-datascience
+fi
+
+docker run                                                      \
+    -it                                                         \
+    --rm                                                        \
+    --env="DISPLAY"                                             \
+    --env="QT_X11_NO_MITSHM=1"                                  \
+    --network=host                                              \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"                 \
+    --volume="/home:/home"                                      \
+    --volume="/media:/media"                                    \
+    --cpus="10"                                                 \
+    --workdir=`pwd`                                             \
+    julia-datascience
+
