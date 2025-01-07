@@ -27,5 +27,5 @@ docker run                                                      \
     --volume="/media:/media"                                    \
     --cpus="10"                                                 \
     --workdir=`pwd`                                             \
-    julia-datascience
+    julia-datascience $@
 
