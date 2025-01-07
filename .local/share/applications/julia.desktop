@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Julia
+Comment=Julia REPL
+Exec=/home/mandrab/.scripts/julia
+Terminal=true
+Type=Application
