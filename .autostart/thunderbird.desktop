@@ -2,7 +2,7 @@
 Name=Thunderbird
 Comment=Send and receive mail with Thunderbird
 GenericName=Mail Client
-Exec=/usr/lib/thunderbird/thunderbird %u
+Exec=/usr/bin/thunderbird %u
 Terminal=false
 Type=Application
 Icon=thunderbird
