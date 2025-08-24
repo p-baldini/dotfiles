@@ -15,6 +15,10 @@
 .bundle/
 # miscellaneous applications data
 .cache/
+# rust packages folder
+.cargo/
+# cmake packages folder
+.cmake/
 # miscellaneous applications data - exclude what you need
 .config/*
 !.config/autostart
@@ -117,13 +121,19 @@
 .vscode-oss/
 # Xournal++ usage data (autosaves etc.)
 .xournalpp/
+# yarn dependencies folder
+.yarn/
 # Zoom meetings application data
 .zoom/
+# Zotero data folder
+.zotero/
 
 #######################################################
 # FOLDERS
 #######################################################
 
+# argos3 simulator installation folder
+argos3/
 bin/
 Desktop/
 Documents/
@@ -138,6 +148,8 @@ snap/
 Videos/
 vmware/
 __pycache__/
+# Zotero data folder
+Zotero/
 
 #######################################################
 # FILES
@@ -178,6 +190,9 @@ __pycache__/
 .yarnrc
 # ZSH history data
 .zsh_history
+# public and private keys
+wgprivatekey
+wgpublickey
 
 #######################################################
 # EXCEPTIONS
