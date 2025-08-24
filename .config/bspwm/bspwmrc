@@ -19,15 +19,17 @@ feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpape
 # system bar(s)
 polybar control &
 polybar status &
-xdo hide -m -a "polybar-control_eDP-1"
-xdo hide -m -a "polybar-status_eDP-1"
+xdo hide -m -a "polybar-control_eDP-1-1"
+xdo hide -m -a "polybar-status_eDP-1-1"
 
 #######################################################################################################
 #   CONFIGS
 #######################################################################################################
 
 # desktops
-bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor -d 1 2 3 4 5 6 7 8 9 0
+#bspc monitor eDP-1-1 -d 1 2 3 4 5 6 7 8 9
+#bspc monitor HDMI-0  -d 0
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 
@@ -95,4 +97,5 @@ bspc rule -a conky sticky=on manage=off lower=on
 bspc rule -a astime sticky=on
 bspc rule -a yad state=floating
 bspc rule -a wpa_gui state=pseudo_tiled
+bspc rule -a xscreensaver flag=hidden
 bspc rule -a 9menu border=off manage=off
