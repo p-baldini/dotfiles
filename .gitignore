@@ -96,6 +96,8 @@
 .pipewire-media-session/
 # Public-Key Infrastructure
 .pki/
+# Firefox generated file
+.pulse-cookie
 # Qt data
 .QtWebEngineProcess/
 # RStudio application data
@@ -123,6 +125,8 @@
 .xournalpp/
 # yarn dependencies folder
 .yarn/
+# zsh completion "cache"
+.zcompdump
 # Zoom meetings application data
 .zoom/
 # Zotero data folder
