@@ -11,7 +11,7 @@ wmname LG3D
 sxhkd &
 
 # compositor. Reduces flicker. Disabling saves resources.
-picom -b --experimental-backends --backend glx &
+picom -b --backend glx &
 
 # wallpaper manager
 feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpaper/default
