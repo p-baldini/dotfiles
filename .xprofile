@@ -51,9 +51,9 @@ dunst &
 
 ## APPLICATIONS STARTUP
 
-# Setup of java jdk through jabba
-[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
-jabba use `jabba ls | head -n 1`
+## Setup of java jdk through jabba
+#[ -s "$HOME/.jabba/jabba.sh" ] && source "$HOME/.jabba/jabba.sh"
+#jabba use `jabba ls | head -n 1`
 
 # This script exec all the other script files in the folder
 FOLDER="$HOME/.autostart"
