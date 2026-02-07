@@ -24,6 +24,7 @@ sudo pacman -S 7zip \
 # Install work packages
 sudo pacman -S \
     htop \
+    make \
     texlive-core
 
 # Install 'oh-my-zsh'
