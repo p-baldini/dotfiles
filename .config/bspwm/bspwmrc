@@ -19,8 +19,8 @@ feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpape
 # system bar(s)
 polybar control &
 polybar status &
-xdo hide -m -a "polybar-control_eDP-1-1"
-xdo hide -m -a "polybar-status_eDP-1-1"
+xdo hide -m -a "polybar-control_eDP-1-1" &
+xdo hide -m -a "polybar-status_eDP-1-1" &
 
 #######################################################################################################
 #   CONFIGS
@@ -75,13 +75,9 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 # exception rules
 bspc rule -a InfoBox state=floating follow=on rectangle=442x220+0+800
 bspc rule -a Gimp desktop=8 state=floating follow=on
-bspc rule -a jade-Boot desktop=9 follow=off
-bspc rule -a Mail desktop=10 follow=off
-bspc rule -a BlueMail desktop=10 follow=off
-bspc rule -a Mailspring desktop=10 follow=off
 bspc rule -a thunderbird desktop=10 follow=off 
 bspc rule -a MainKt state=floating
-bspc rule -a Vivaldi-snapshot private=on
+bspc rule -a Vivaldi private=on
 bspc rule -a Zathura state=tiled
 
 bspc rule -a gcolor2 state=floating center=true
