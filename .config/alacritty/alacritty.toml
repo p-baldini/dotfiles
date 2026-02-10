@@ -18,4 +18,4 @@ family = "monospace"
 style = "Regular"
 
 [general]
-import = ["/home/mandrab/.config/alacritty/themes/solarized_light.toml"]
+import = ["themes/solarized_light.toml"]
