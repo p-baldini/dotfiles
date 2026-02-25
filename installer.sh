@@ -31,6 +31,7 @@ sudo pacman -S \
     code \
     htop \
     make \
+    texlive-bibtexextra \
     texlive-binextra \
     texlive-core \
     texlive-fontsextra \
@@ -38,6 +39,7 @@ sudo pacman -S \
     texlive-latex \
     texlive-latexextra \
     texlive-latexrecommended \
+    texlive-mathscience \
     texlive-plaingeneric \
     tree
 yay -S \
