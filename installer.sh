@@ -1,4 +1,4 @@
-# Install essential packages
+# Install rice packages
 sudo pacman -S 7zip \
     alsa-utils \
     alacritty \
@@ -22,6 +22,7 @@ sudo pacman -S 7zip \
     unrar \
     xdo \
     xorg-xinput \
+    xscreensaver \
     zsh
 yay -S \
     light
