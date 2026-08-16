@@ -141,6 +141,13 @@
 
 # System folders
 Backups/
+boot/
+Cache/
+CachedData/
+Code Cache/
+Crashpad/
+DownGraphiteCache
+
 CachedConfigurations/
 CachedExtensionVSIXs/
 CachedProfilesData/
@@ -153,9 +160,13 @@ mnt/
 nix/
 proc/
 run/
+srv/
 sys/
 tmp/
+etc/
+root/
 var/
+usr/
 # argos3 simulator installation folder
 argos3/
 bin/
@@ -216,26 +227,35 @@ Zotero/
 /home/**/.yarnrc
 # ZSH history data
 /home/**/.zsh_history
-# Language file
-languagepacks.json
-# ID of the machine
-machineid
-# public and private keys
-wgprivatekey
-wgpublickey
 # ???
-Cookies
-Cookies-journal
-code.lock
-DIPS
-DIPS-wal
-Preferences
-Network Persistent State
-SharedStorage
-SharedStorage-wal
-TransportSecurity
-Trust Tokens
-Trust Tokens-journal
+1.11-main.sock
+
+# VSCode
+/**/blob_storage/
+/**/languagepacks.json
+/**/machineid
+/**/wgprivatekey
+/**/wgpublickey
+/**/Cookies
+/**/Cookies-journal
+/**/code.lock
+/**/DIPS
+/**/DawnGraphiteCache/
+/**/DawnWebGPUCache/
+/**/GPUCache/
+/**/Local Storage/
+/**/lost+found/
+/**/Dictionaries/
+/**/DIPS-wal
+/**/Preferences
+/**/Network Persistent State
+/**/SharedStorage
+/**/SharedStorage-wal
+/**/TransportSecurity
+/**/Trust Tokens
+/**/Trust Tokens-journal
+/**/Session Storage/
+/**/Shared Dictionary/
 
 #######################################################
 # EXCEPTIONS
