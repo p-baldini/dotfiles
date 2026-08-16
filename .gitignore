@@ -145,7 +145,7 @@ CachedConfigurations/
 CachedExtensionVSIXs/
 CachedProfilesData/
 User/
-etc/
+etc/*
 dev/
 lib64/
 logs/
@@ -241,7 +241,7 @@ Trust Tokens-journal
 # EXCEPTIONS
 #######################################################
 
-!/etc/nixos/
+!/etc/nixos
 !/home/**/.gtkrc*.mine
 !/home/**/.local/share/applications/mailspring.desktop
 !/home/**/.local/share/applications/ranger.desktop
