@@ -1,5 +1,7 @@
 # NixOS system setup
 
+The repository is intended to be cloned in the root of the file system (i.e., `/`).
+
 ## TODO list:
 - separate configuration.nix in files per topic and in home-managed data;
 - updated package dependencies;
