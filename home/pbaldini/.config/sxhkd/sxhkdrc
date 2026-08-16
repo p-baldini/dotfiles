@@ -40,11 +40,11 @@ XF86AudioRaiseVolume
 
 # increment brightness
 XF86MonBrightnessUp
-	light -A 5
+	brightnessctl set 5%+
 
 # decrement brightness
 XF86MonBrightnessDown
-	light -U 5
+	brightnessctl set 5%-
 
 # TODO
 # XF86Sleep
