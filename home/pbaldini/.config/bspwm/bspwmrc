@@ -5,22 +5,22 @@
 #######################################################################################################
 
 # needed to make java GUI works https://bit.ly/2ycKpYD
-wmname LG3D
+#wmname LG3D
 
 # keybinding daemon
-sxhkd &
+#sxhkd &
 
 # compositor. Reduces flicker. Disabling saves resources.
-picom -b --backend glx &
+#picom -b --backend glx &
 
 # wallpaper manager
-feh --no-fehbg --bg-fill --bg-center --bg-scale `xdg-user-dir PICTURES`/wallpaper/default
+#feh --no-fehbg --bg-fill --bg-center --bg-scale $HOME/.wallpaper.jpg
 
 # system bar(s)
-polybar control &
-polybar status &
-xdo hide -m -a "polybar-control_eDP-1-1" &
-xdo hide -m -a "polybar-status_eDP-1-1" &
+#polybar control &
+#polybar status &
+#xdo hide -m -a "polybar-control_eDP-1-1" &
+#xdo hide -m -a "polybar-status_eDP-1-1" &
 
 #######################################################################################################
 #   CONFIGS
