@@ -137,6 +137,7 @@
 #######################################################
 
 # System folders
+Backups/
 CachedConfigurations/
 CachedExtensionVSIXs/
 CachedProfilesData/
