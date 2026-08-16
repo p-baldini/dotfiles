@@ -19,6 +19,8 @@
 /home/**/.cargo/
 # cmake packages folder
 /home/**/.cmake/
+# ???
+/home/**/.compose-cache/
 # miscellaneous applications data - exclude what you need
 /home/**/.config/*
 !/home/**/.config/autostart
@@ -121,6 +123,7 @@
 # VSCode application data
 /home/**/.vscode/
 /home/**/.vscode-oss/
+/home/**/.vscode-shared/
 # Xournal++ usage data (autosaves etc.)
 /home/**/.xournalpp/
 # yarn dependencies folder
@@ -176,6 +179,8 @@ Zotero/
 # FILES
 #######################################################
 
+# Vim modified data
+*~
 # Bash data
 /home/**/.bash_history
 /home/**/.bash_logout
