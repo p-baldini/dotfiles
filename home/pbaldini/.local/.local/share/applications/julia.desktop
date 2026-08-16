@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Julia
-Comment=Julia REPL
-Exec=/home/mandrab/.scripts/julia
-Icon=/home/mandrab/.local/share/icons/julia/icon.png
-Terminal=true
-Type=Application
