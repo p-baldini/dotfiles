@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ config, pkgs, ... }: {
     # Include the results of the hardware scan.
     imports = [ ./hardware-configuration.nix ];
 
@@ -20,7 +18,6 @@
 
     # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
-
     i18n.extraLocaleSettings = {
         LC_ADDRESS = "it_IT.UTF-8";
         LC_IDENTIFICATION = "it_IT.UTF-8";
@@ -50,14 +47,16 @@
     services.xserver.videoDrivers = [ "modesetting" ]; #[ "nvidia" ];
     services.displayManager.ly.enable = true;
     services.picom.enable = true;
-    #     enable = true;
-    #     fade = true;
-    #     inactiveOpacity = 0.9;
-    #     activeOpacity = 1.0;
-    #     backend = "glx";
-    #     vSync = true;
-    # };
-    services.udev.packages = [ pkgs.autorandr ];
+ 
+    # Automatically setup second monitor
+    systemd.user.services.autorandr = {
+        enable = true;
+        description = "Setup the second monitor";
+        script = ''${pkgs.autorandr}/bin/autorandr home-setup'';
+        wantedBy = [ "graphical-session.target" ];
+        serviceConfig.Type = "oneshot";
+        serviceConfig.PassEnvironment = "DISPLAY";
+    };
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users."pbaldini" = {
@@ -129,5 +128,4 @@
     # Before changing this value read the documentation for this option
     # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
     system.stateVersion = "26.05"; # Did you read the comment?
-
 }
