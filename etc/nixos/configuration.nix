@@ -10,7 +10,7 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     # Networking.
-    networking.hostName = "pbaldini-legion"; # Define your hostname.
+    networking.hostName = "legion"; # Define your hostname.
     networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     # networking.proxy.default = "http://user:password@proxy:port/";
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
