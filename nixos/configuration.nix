@@ -94,6 +94,7 @@
         vscode
         wget
         steam
+        thunderbird
         xdo
     ];
 
