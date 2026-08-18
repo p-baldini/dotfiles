@@ -13,6 +13,7 @@ This will install are relevant files and packages in your system.
 [xdj-ninja](github.com/b3nj5m1n/xdg-ninja): tells you which config file can be moved inside $XDG_CONFIG_HOME. Run it with `nix run github:b3nj5m1n/xdg-ninja`.
 
 ## TODO list:
+- integrate autostart folder files into nix configuration;
 - separate configuration.nix in files per topic and in home-managed data;
 - updated package dependencies;
 - adapt usage of scrot to the new bar; evaluate inclusion as rofi script;
