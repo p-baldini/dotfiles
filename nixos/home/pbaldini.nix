@@ -11,9 +11,11 @@
         BROWSER = "${pkgs.vivaldi}/bin/vivaldi";
         EDITOR = "${pkgs.vim}/bin/vim";
         GUI_EDITOR = "${pkgs.code}/bin/code";
-        HISTFILE = "${config.xdg.stateHome}/bash/history";
+        HISTFILE = "${config.xdg.stateHome}/history";
         TERMINAL = "${pkgs.alacritty}/bin/alacritty";
         VISUAL = "${pkgs.code}/bin/code";
+        XCOMPOSECACHE = "${config.xdg.cacheHome}/X11/xcompose";
+        ZDOTDIR = "${config.xdg.configHome}/zsh";
     };
 
     xdg.enable = true;
