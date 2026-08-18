@@ -11,6 +11,7 @@
         BROWSER = "${pkgs.vivaldi}/bin/vivaldi";
         EDITOR = "${pkgs.vim}/bin/vim";
         GUI_EDITOR = "${pkgs.code}/bin/code";
+        HISTFILE = "${config.xdg.stateHome}/bash/history";
         TERMINAL = "${pkgs.alacritty}/bin/alacritty";
         VISUAL = "${pkgs.code}/bin/code";
     };
