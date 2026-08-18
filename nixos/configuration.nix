@@ -79,8 +79,9 @@
     environment.systemPackages = with pkgs; [
         autorandr
         alacritty
+        brightnessctl
         dunst
-	gh
+        gh
         git
         home-manager
         polybar
@@ -93,7 +94,7 @@
         vscode
         wget
         steam
-	xdo
+        xdo
     ];
 
     fileSystems."/mnt" = {
