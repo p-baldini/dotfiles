@@ -2,7 +2,7 @@
     email = paolo.baldini.phd@gmail.com
     name = Paolo Baldini
 [credential "https://github.com"]
-    helper = !/usr/bin/gh auth git-credential
+    helper = gh auth git-credential
 [init]
     defaultBranch = master
 [pull]
@@ -10,4 +10,4 @@
 [core]
     editor = vim
 [safe]
-	directory = /
+    directory = /
