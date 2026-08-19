@@ -27,4 +27,5 @@
     xdg.enable = true;
 
     services.xscreensaver.enable = true;
+    home.file.".xscreensaver".source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/.xscreensaver";
 }
