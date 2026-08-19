@@ -11,6 +11,10 @@
             enable = true;
 	    theme = "mandrab";
             custom = "${config.xdg.configHome}/oh-my-zsh";
+            plugins = [
+                "git"
+                "sudo"
+            ];
         };
 
         shellAliases = {
