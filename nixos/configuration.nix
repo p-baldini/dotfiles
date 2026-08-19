@@ -91,10 +91,7 @@
         scrot
         vim
         vivaldi
-        vscode
         wget
-        steam
-        thunderbird
         xdo
     ];
 
