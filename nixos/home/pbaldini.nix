@@ -1,18 +1,22 @@
 { config, pkgs, ... }: {
+    # Home directory information
     home.username = "pbaldini";
     home.homeDirectory = "/home/pbaldini";
     home.stateVersion = "26.05";
 
+    # User level installed packages
     home.packages = with pkgs; [
         steam
         thunderbird
         vscode
     ];
 
+    # Import of application configuration files
     imports = [
         ./dotfiles/zsh.nix
     ];
 
+    # Set up of environmental variables
     home.sessionVariables = {
         BROWSER = "${pkgs.vivaldi}/bin/vivaldi";
         EDITOR = "${pkgs.vim}/bin/vim";
@@ -24,8 +28,16 @@
         ZDOTDIR = "${config.xdg.configHome}/zsh";
     };
 
+    # Set up of XDG folder management and application autostart
     xdg.enable = true;
+    xdg.autostart = {
+        enable = true;
+        entries = [
+            "${pkgs.thunderbird}/share/applications/thunderbird.desktop"
+        ];
+    };
 
+    # Set up of XScreenSaver application
     services.xscreensaver.enable = true;
     home.file.".xscreensaver".source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/.xscreensaver";
 }

@@ -48,6 +48,7 @@
     services.xserver.xkb.variant = "";
     services.xserver.windowManager.bspwm.enable = true;
     services.xserver.videoDrivers = [ "modesetting" ]; #[ "nvidia" ];
+    services.xserver.desktopManager.runXdgAutostartIfNone = true;
     services.displayManager.ly.enable = true;
     services.picom.enable = true;
  

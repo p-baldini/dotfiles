@@ -13,6 +13,7 @@
 # FOLDERS
 #######################################################
 
+autostart/
 Code/
 environment.d/
 fontconfig/conf.d/
