@@ -14,13 +14,13 @@
         nixosConfigurations.legion = nixpkgs.lib.nixosSystem {
             system = "x86_64-linux";
             modules = [
-                ./configuration.nix
+                ./lenovo-legion/configuration.nix
                 home-manager.nixosModules.home-manager {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
                     home-manager.backupFileExtension = "backup";
 
-                    home-manager.users.pbaldini.imports = [ ./home/pbaldini.nix ];
+                    home-manager.users.pbaldini.imports = [ ./lenovo-legion/home/pbaldini.nix ];
                 }
             ];
         };
