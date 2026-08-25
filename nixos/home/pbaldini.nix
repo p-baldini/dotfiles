@@ -40,4 +40,7 @@
     # Set up of XScreenSaver application
     services.xscreensaver.enable = true;
     home.file.".xscreensaver".source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/.xscreensaver";
+    
+    # Set up desktop background image
+    home.file.".background-image".source = .config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/.background-image";
 }
