@@ -9,6 +9,7 @@
         steam
         thunderbird
         vscode
+        tree
     ];
 
     # Import of application configuration files
@@ -42,5 +43,5 @@
     home.file.".xscreensaver".source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/.xscreensaver";
     
     # Set up desktop background image
-    home.file.".background-image".source = .config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/.background-image";
+    home.file.".background-image".source = config.lib.file.mkOutOfStoreSymlink "${config.xdg.configHome}/.background-image";
 }
