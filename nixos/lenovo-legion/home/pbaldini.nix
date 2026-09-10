@@ -6,10 +6,12 @@
 
     # User level installed packages
     home.packages = with pkgs; [
-        scanmem
-        steam
-        thunderbird
-        tree
+        pixi         # project-focused package manager
+        scanmem      # scan and modification of ram values
+        steam        # game distribution platform
+        texliveFull  # latex tools and packages
+        thunderbird  # email client
+        tree         # directory and file listing
     ];
 
     # Import of application configuration files
