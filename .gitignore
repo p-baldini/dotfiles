@@ -8,6 +8,7 @@
 *un~
 # Less file
 .lesshst
+mimeapps.list
 
 #######################################################
 # FOLDERS
@@ -17,6 +18,7 @@ autostart/
 Code/
 environment.d/
 fontconfig/conf.d/
+glib-*.*/
 pulse/
 systemd/
 zsh/
