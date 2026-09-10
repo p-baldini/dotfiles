@@ -6,14 +6,15 @@
 
     # User level installed packages
     home.packages = with pkgs; [
+        scanmem
         steam
         thunderbird
-        vscode
         tree
     ];
 
     # Import of application configuration files
     imports = [
+        ./dotfiles/vscode.nix
         ./dotfiles/zsh.nix
     ];
 
