@@ -99,6 +99,7 @@
         gh
         git
         home-manager
+        htop
         polybar
         ranger
         rofi
