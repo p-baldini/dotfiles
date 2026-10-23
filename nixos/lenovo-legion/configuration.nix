@@ -72,6 +72,15 @@
         shell = pkgs.zsh;
     };
 
+    # Puts libraries loader at standard path for systems like conda and pixi to work.
+    programs.nix-ld = {
+        enable = true;
+        libraries = with pkgs; [
+            stdenv.cc.cc.lib # libstdc++
+            zlib
+        ];
+    };
+
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
 
