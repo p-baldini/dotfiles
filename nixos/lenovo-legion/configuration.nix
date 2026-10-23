@@ -42,7 +42,12 @@
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
 
-    # Configure GUI
+    # Enable bluetooth hardware and services.
+    hardware.bluetooth.enable = true;
+    hardware.bluetooth.powerOnBoot = true;
+    services.blueman.enable = true;
+
+    # Configure GUI.
     services.xserver.enable = true;
     services.xserver.xkb.layout = "us";
     services.xserver.xkb.variant = "";
