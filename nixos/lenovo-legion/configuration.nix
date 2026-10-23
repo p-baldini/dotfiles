@@ -109,12 +109,22 @@
         vivaldi
         wget
         xdo
-    ];
 
+    # Enable zram compession.
+    zramSwap.enable = true;
+
+    # Automatically mount sda5 in mnt.
     fileSystems."/mnt" = {
 	device = "/dev/sda5";
     	fsType = "ext4";
     };
+
+    # Create a swap file of 32GB.
+    swapDevices = [{
+        device = "/var/lib/swapfile";
+        size = 32 * 1024;
+    }];
+
 
     # The NixOS release from which the default settings were taken; change with caution
     system.stateVersion = "26.05";
