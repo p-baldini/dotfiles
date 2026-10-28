@@ -57,7 +57,7 @@
     services.displayManager.ly.enable = true;
     services.picom.enable = true;
  
-    # Automatically setup second monitor
+    # Automatically setup second monitor.
     systemd.user.services.autorandr = {
         enable = true;
         description = "Setup the second monitor";
@@ -101,6 +101,7 @@
         git
         home-manager
         htop
+        pamixer
         polybar
         ranger
         rofi

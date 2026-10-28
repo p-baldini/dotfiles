@@ -28,15 +28,15 @@ super + c
 
 # audio mute
 XF86AudioMute
-	amixer -D pulse set Master 1+ toggle
+	pamixer set -t
 
 # decrease audio
 XF86AudioLowerVolume
-	amixer set 'Master' 10%-
+	pamixer set -d 10
 
 # increase audio
 XF86AudioRaiseVolume
-	amixer set 'Master' 10%+
+	pamixer set -i 10
 
 # increment brightness
 XF86MonBrightnessUp
