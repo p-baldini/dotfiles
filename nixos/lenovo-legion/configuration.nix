@@ -95,6 +95,7 @@
         alacritty       # terminal emulator
         autorandr       # display configurator
         brightnessctl   # brightness setter
+        claude-code     # claude cli tool - note: much older version that what currently available
         dunst           # notification daemon
         gh              # github cli tool
         git             # version control system
@@ -111,6 +112,7 @@
         vivaldi         # web browser
         wget            # file "downloader"
         xdo             # window actions
+    ];
 
     # Enable zram compession.
     zramSwap.enable = true;
