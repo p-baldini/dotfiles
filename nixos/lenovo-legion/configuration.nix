@@ -92,25 +92,25 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-        p7zip
-        autorandr
-        alacritty
-        brightnessctl
-        dunst
-        gh
-        git
-        home-manager
-        htop
-        pamixer
-        polybar
-        ranger
-        rofi
-        oh-my-zsh
-        scrot
-        vim
-        vivaldi
-        wget
-        xdo
+        alacritty       # terminal emulator
+        autorandr       # display configurator
+        brightnessctl   # brightness setter
+        dunst           # notification daemon
+        gh              # github cli tool
+        git             # version control system
+        home-manager    # user environment configurator
+        htop            # processes overview
+        oh-my-zsh       # zsh configurator
+        p7zip           # archiver and extractor
+        pamixer         # audio volume setter
+        polybar         # status bar
+        ranger          # file manager
+        rofi            # application launcher
+        scrot           # capture utility
+        vim             # cli file editor
+        vivaldi         # web browser
+        wget            # file "downloader"
+        xdo             # window actions
 
     # Enable zram compession.
     zramSwap.enable = true;
