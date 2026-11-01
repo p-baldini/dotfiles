@@ -57,6 +57,7 @@
     services.xserver.xkb.variant = "";
     services.xserver.windowManager.bspwm.enable = true;
     services.xserver.videoDrivers = [ "nvidia" ];
+    services.xserver.dpi = 96; # Nvidia otherwise derives DPI from the external monitor's EDID (~81).
     services.xserver.desktopManager.runXdgAutostartIfNone = true;
     services.displayManager.ly.enable = true;
     services.picom.enable = true;
