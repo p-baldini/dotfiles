@@ -59,7 +59,7 @@
     services.xserver.videoDrivers = [ "nvidia" ];
     services.xserver.dpi = 96; # Nvidia otherwise derives DPI from the external monitor's EDID (~81).
     services.xserver.desktopManager.runXdgAutostartIfNone = true;
-    services.displayManager.ly.enable = true;
+    services.displayManager.ly.enable = true; # login manager.
     services.picom.enable = true;
  
     # Automatically setup second monitor.
