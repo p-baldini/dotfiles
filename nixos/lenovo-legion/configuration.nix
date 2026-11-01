@@ -43,7 +43,6 @@
         intelBusId = "PCI:0:2:0";
         nvidiaBusId = "PCI:1:0:0";
     };
-
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
 
@@ -134,6 +133,14 @@
         size = 32 * 1024;
     }];
 
+    # Avoids random screen state at startup.
+    systemd.services.blank-fb1 = {
+        description = "Blank secondary framebuffer";
+        wantedBy = [ "display-manager.service" ];
+        before = [ "display-manager.service" ];
+        serviceConfig.Type = "oneshot";
+        script = "[ -e /dev/fb1 ] && ${pkgs.coreutils}/bin/dd if=/dev/zero of=/dev/fb1 bs=1M 2>/dev/null || true";
+    };
 
     # The NixOS release from which the default settings were taken; change with caution
     system.stateVersion = "26.05";
