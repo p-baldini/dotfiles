@@ -34,10 +34,15 @@
     };
 
     # Enable Nvidia proprietary drivers.
-    #hardware.nvidia.open = false;
-    #hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
-    #hardware.nvidia.modesetting.enable = true;
-    #hardware.nvidia.nvidiaSettings = true;
+    hardware.nvidia.open = false;
+    hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+    hardware.nvidia.modesetting.enable = true;
+    hardware.nvidia.nvidiaSettings = true;
+    hardware.nvidia.prime = {
+        sync.enable = true; # Nvidia renders everything, Intel only drives the panel.
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+    };
 
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
@@ -52,7 +57,7 @@
     services.xserver.xkb.layout = "us";
     services.xserver.xkb.variant = "";
     services.xserver.windowManager.bspwm.enable = true;
-    services.xserver.videoDrivers = [ "modesetting" ]; #[ "nvidia" ];
+    services.xserver.videoDrivers = [ "nvidia" ];
     services.xserver.desktopManager.runXdgAutostartIfNone = true;
     services.displayManager.ly.enable = true;
     services.picom.enable = true;
