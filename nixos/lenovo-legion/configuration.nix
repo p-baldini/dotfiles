@@ -101,8 +101,11 @@
         autorandr       # display configurator
         brightnessctl   # brightness setter
         claude-code     # claude cli tool - note: much older version that what currently available
+        cmake           # system builder
         dunst           # notification daemon
+        gcc             # c compiler
         gh              # github cli tool
+        gnumake         # control generation of non-source binaries
         git             # version control system
         home-manager    # user environment configurator
         htop            # processes overview
