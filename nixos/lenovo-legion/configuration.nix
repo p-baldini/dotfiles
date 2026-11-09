@@ -86,6 +86,7 @@
     programs.nix-ld = {
         enable = true;
         libraries = with pkgs; [
+            libGL
             stdenv.cc.cc.lib # libstdc++
             zlib
         ];
